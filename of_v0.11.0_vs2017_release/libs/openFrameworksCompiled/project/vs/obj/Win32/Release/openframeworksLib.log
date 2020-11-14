@@ -1,0 +1,121 @@
+﻿  of3dPrimitives.cpp
+  of3dUtils.cpp
+  ofCamera.cpp
+  ofEasyCam.cpp
+  ofNode.cpp
+  ofAppGLFWWindow.cpp
+  ofAppNoWindow.cpp
+  ofAppRunner.cpp
+  ofBaseApp.cpp
+  ofMainLoop.cpp
+  ofEvents.cpp
+  ofBufferObject.cpp
+  ofFbo.cpp
+  ofGLRenderer.cpp
+  ofGLUtils.cpp
+  ofLight.cpp
+  ofMaterial.cpp
+  ofGLProgrammableRenderer.cpp
+  ofShader.cpp
+  ofTexture.cpp
+  ofVbo.cpp
+  ofVboMesh.cpp
+  of3dGraphics.cpp
+  ofBitmapFont.cpp
+  ofCairoRenderer.cpp
+  ofGraphics.cpp
+  ofGraphicsBaseTypes.cpp
+  ofImage.cpp
+  ofPath.cpp
+  ofPixels.cpp
+  ofRendererCollection.cpp
+  ofTessellator.cpp
+  ofTrueTypeFont.cpp
+  ofMath.cpp
+  ofMatrix3x3.cpp
+  ofMatrix4x4.cpp
+  ofQuaternion.cpp
+  ofVec2f.cpp
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofTrueTypeFont.cpp(287,1): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(1191): message : see declaration of 'getenv'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofTrueTypeFont.cpp(300,1): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(1015): message : see declaration of 'wcstombs'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofTrueTypeFont.cpp(301,1): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(1015): message : see declaration of 'wcstombs'
+  ofVec4f.cpp
+  ofFmodSoundPlayer.cpp
+  ofRtAudioSoundStream.cpp
+  ofSoundBaseTypes.cpp
+  ofSoundBuffer.cpp
+  ofSoundPlayer.cpp
+  ofSoundStream.cpp
+  ofBaseTypes.cpp
+  ofColor.cpp
+  ofParameter.cpp
+  ofParameterGroup.cpp
+  ofRectangle.cpp
+  ofFileUtils.cpp
+  ofFpsCounter.cpp
+  ofLog.cpp
+  ofMatrixStack.cpp
+  ofSystemUtils.cpp
+  ofThread.cpp
+  ofTimer.cpp
+  ofURLFileLoader.cpp
+  ofUtils.cpp
+  ofXml.cpp
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofSystemUtils.cpp(285,1): warning C4996: 'mbstowcs': This function or variable may be unsafe. Consider using mbstowcs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(927): message : see declaration of 'mbstowcs'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofSystemUtils.cpp(336,3): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(123): message : see declaration of 'wcscpy'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofSystemUtils.cpp(415,4): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(123): message : see declaration of 'wcscpy'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofSystemUtils.cpp(420,4): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(123): message : see declaration of 'wcscpy'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofSystemUtils.cpp(450,4): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(123): message : see declaration of 'wcscpy'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofSystemUtils.cpp(452,4): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(123): message : see declaration of 'wcscpy'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofUtils.cpp(412,1): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(506): message : see declaration of 'localtime'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofUtils.cpp(436,1): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(506): message : see declaration of 'localtime'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofUtils.cpp(445,1): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(506): message : see declaration of 'localtime'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofUtils.cpp(454,1): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(506): message : see declaration of 'localtime'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofUtils.cpp(463,1): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(506): message : see declaration of 'localtime'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofUtils.cpp(473,1): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(506): message : see declaration of 'localtime'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofUtils.cpp(483,1): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(506): message : see declaration of 'localtime'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofUtils.cpp(492,1): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(506): message : see declaration of 'localtime'
+  ofDirectShowGrabber.cpp
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofXml.cpp(204,1): warning C4996: 'pugi::xml_node::select_single_node': was declared deprecated
+D:\project\of_v0.11.0_vs2017_release\libs\pugixml\include\pugixml.hpp(654): message : see declaration of 'pugi::xml_node::select_single_node'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofXml.cpp(205,33): warning C4101: 'e': unreferenced local variable
+  ofDirectShowPlayer.cpp
+  ofVideoGrabber.cpp
+  ofVideoPlayer.cpp
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\video\ofDirectShowGrabber.cpp(121,26): warning C4018: '<': signed/unsigned mismatch
+  ofArduino.cpp
+  ofSerial.cpp
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\communication\ofArduino.cpp(560,1): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1774): message : see declaration of 'sprintf'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\communication\ofArduino.cpp(940,4): warning C4834: discarding return value of function with 'nodiscard' attribute
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\communication\ofArduino.cpp(1526,34): warning C4333: '>>': right shift by too large amount, data loss
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\communication\ofSerial.cpp(78,7): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\communication\ofSerial.cpp(65,1): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1774): message : see declaration of 'sprintf'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\communication\ofSerial.cpp(391,1): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263): message : see declaration of 'sscanf'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\communication\ofSerial.cpp(394,1): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1774): message : see declaration of 'sprintf'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\communication\ofSerial.cpp(396,1): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(338): message : see declaration of 'strncpy'
+D:\project\of_v0.11.0_vs2017_release\libs\openFrameworks\communication\ofSerial.cpp(419,1): warning C4996: 'swprintf': function has been changed to conform with the ISO C standard, adding an extra character count parameter. To use the traditional Microsoft version, set _CRT_NON_CONFORMING_SWPRINTFS.
+F:\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1822): message : see declaration of 'swprintf'
+  openframeworksLib.vcxproj -> D:\project\of_v0.11.0_vs2017_release\libs\openFrameworksCompiled\project\vs\..\..\lib\vs\Win32\openframeworksLib.lib
