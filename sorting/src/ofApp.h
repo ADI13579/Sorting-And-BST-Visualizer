@@ -27,9 +27,10 @@ public:
 	void insertion__sort_operation();
 	void insertion_sort();
 
-	void merge__sort_operation(dat* array,int merge_begin,int merge_end);
-	void merge_sort(dat* array);
+	void merge__sort_operation();
+	void merge_sort();
 	void set_merge_order(stack<int> *merge_order,int left,int right);
+	void swap(dat *array1,dat *array2);
 	stack<int> merge_order;
 	int merge_begin, merge_end;
 

@@ -20,7 +20,7 @@ void ofApp::update() {
 		}
 		if (bool_merge_sort)
 		{
-			merge_sort(&array[0]);
+			merge_sort();
 		}
 	}
 	
