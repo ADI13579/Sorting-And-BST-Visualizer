@@ -18,16 +18,16 @@ public:
 	void keyPressed(int key);
 	
 	
-	void selection_sort_operation(dat* array);
-	void selection_sort(dat* array);
+	void selection_sort_operation();
+	void selection_sort();
 
-	void bubble_sort_operation(dat *array);
-	void bubble_sort(dat* array);
+	void bubble_sort_operation();
+	void bubble_sort();
 
-	void insertion__sort_operation(dat* array);
-	void insertion_sort(dat* array);
+	void insertion__sort_operation();
+	void insertion_sort();
 
-	void merge__sort_operation(dat* array);
+	void merge__sort_operation(dat* array,int merge_begin,int merge_end);
 	void merge_sort(dat* array);
 	void set_merge_order(stack<int> *merge_order,int left,int right);
 	stack<int> merge_order;

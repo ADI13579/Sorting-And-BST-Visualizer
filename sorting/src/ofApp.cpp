@@ -8,15 +8,15 @@ void ofApp::update() {
 	{
 		if (bool_bubble_sort)
 		{
-			bubble_sort(&array[0]);
+			bubble_sort();
 		}
 		if (bool_selection_sort)
 		{
-			selection_sort(&array[0]);
+			selection_sort();
 		}
 		if (bool_insertion_sort)
 		{
-			insertion_sort(&array[0]);
+			insertion_sort();
 		}
 		if (bool_merge_sort)
 		{

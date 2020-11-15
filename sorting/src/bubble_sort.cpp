@@ -1,7 +1,7 @@
 #include"ofApp.h"
 
 
-void ofApp::bubble_sort_operation(dat* array)
+void ofApp::bubble_sort_operation()
 {
 	setColor[0] = j;
 	setColor[1] = -1;
@@ -18,7 +18,7 @@ void ofApp::bubble_sort_operation(dat* array)
 	}
 }
 
-void ofApp::bubble_sort(dat* array)
+void ofApp::bubble_sort()
 {
 	if (event)
 	{
@@ -41,6 +41,6 @@ void ofApp::bubble_sort(dat* array)
 			setColor[0] = setColor[1] = -1;
 		}
 
-		bubble_sort_operation(array);
+		bubble_sort_operation();
 	}
 }
