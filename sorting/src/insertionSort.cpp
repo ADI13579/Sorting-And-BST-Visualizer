@@ -1,7 +1,7 @@
 #include"ofApp.h"
 
 
-void ofApp::insertion__sort_operation(dat* array)
+void ofApp::insertion__sort_operation()
 {
 	if (array[pos2].dat >= array[pos2 - 1].dat || pos2 == 0)
 	{
@@ -22,7 +22,7 @@ void ofApp::insertion__sort_operation(dat* array)
 		}
 	}	
 }
-void ofApp::insertion_sort(dat* array)
+void ofApp::insertion_sort()
 {
 	if (event1 || event2 || event3)
 	{
@@ -62,6 +62,6 @@ void ofApp::insertion_sort(dat* array)
 		if (count == number)
 			button= 0;
 		else
-			insertion__sort_operation(array);
+			insertion__sort_operation();
 	}
 }
