@@ -22,10 +22,6 @@ void ofApp::update() {
 		{
 			merge_sort(&array[0]);
 		}
-		if (test)
-		{
-			test = animate->moveTo(&array[10], array[0].xpos);
-		}
 	}
 	
 	if (intField > 0 && intField != number)
@@ -99,9 +95,5 @@ void ofApp::keyPressed(int key) {
 		menu = 1;
 		bool_selection_sort = bool_bubble_sort = bool_insertion_sort = 0;
 	}
-	else if (key == 'p' && menu)
-	{
-		menu = 0;
-		test = 1;
-	}
+	
 }
