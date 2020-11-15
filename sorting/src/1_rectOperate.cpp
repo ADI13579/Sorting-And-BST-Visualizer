@@ -63,7 +63,7 @@ bool rectOperate::moveTo(dat* array,int x)
 		array->pos.y=move.y-array->size.y;
 	}
 
-	return  (b);
+	return  b;
 }
 
 bool rectOperate::moveDown(dat* array)

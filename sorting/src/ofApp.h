@@ -31,6 +31,7 @@ public:
 	void merge_sort(dat* array);
 	void set_merge_order(stack<int> *merge_order,int left,int right);
 	stack<int> merge_order;
+	int merge_begin, merge_end;
 
 
 	void shuffle();
@@ -51,15 +52,14 @@ public:
 	float width;
 	rectOperate* animate;
 	int setColor[3] ;
+
+	//Panel to take input of number in menu
 	ofxPanel gui;
 	ofxIntField intField;
 	ofTrueTypeFont font;
 
+	//Panel after menu for sorting
 	ofxPanel gui2;
 	ofxToggle button;
 	ofxIntSlider factor;
-
-
-
-	bool test;
 };
