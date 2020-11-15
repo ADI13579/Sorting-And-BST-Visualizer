@@ -6,11 +6,11 @@ void ofApp::update() {
 	span = 5 * factor;
 	if (button)
 	{
-		if (bool_bubble_sort == 1)
+		if (bool_bubble_sort)
 		{
 			bubble_sort(&array[0]);
 		}
-		if (bool_selection_sort == 1)
+		if (bool_selection_sort)
 		{
 			selection_sort(&array[0]);
 		}
@@ -86,6 +86,7 @@ void ofApp::keyPressed(int key) {
 	if (key == '4' && menu)
 	{
 		menu = 0;
+		set_merge_order(&merge_order, 0, number - 1);
 		bool_merge_sort = 1;
 	}
 	else if (key == 'r' && menu!=1)
