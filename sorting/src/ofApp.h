@@ -4,6 +4,7 @@
 #include"ofxGui.h"
 #include "dat.h"
 #include"rectOperate.h"
+#include<stack>
 
 
 class ofApp : public ofBaseApp {
@@ -28,6 +29,9 @@ public:
 
 	void merge__sort_operation(dat* array);
 	void merge_sort(dat* array);
+	void set_merge_order(stack<int> *merge_order,int left,int right);
+	stack<int> merge_order;
+
 
 	void shuffle();
 	
