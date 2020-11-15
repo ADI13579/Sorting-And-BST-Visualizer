@@ -60,7 +60,7 @@ bool rectOperate::moveTo(dat* array,int index)
 		}
 	}
 	if (!b)
-	{
+	{	
 		array->pos.y=move.y-array->size.y;
 	}
 
