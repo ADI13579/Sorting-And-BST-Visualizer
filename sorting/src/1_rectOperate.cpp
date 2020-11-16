@@ -38,10 +38,10 @@ bool rectOperate::moveUp(dat* array)
 	return 0;
 }
 
-bool rectOperate::moveTo(dat* array,int index)
+bool rectOperate::moveTo(dat* array,int index1)
 {
 	bool  b;
-	int x = (index+1)*scale.x;
+	int x = (index1+1)*scale.x;
 	*span = *span / 5;
 	if (array->xpos > x)
 	{

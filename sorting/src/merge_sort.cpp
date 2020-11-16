@@ -8,7 +8,31 @@ void ofApp::merge_sort()
 {
 	if (event1) 
 	{
-		merge_sort_operation();
+		if (merge_begin == merge_end == merge_mid == -1)
+		{
+			if (!merge_order.empty())
+			{
+				index1=merge_begin = merge_order.top(); merge_order.pop();
+				merge_end = merge_order.top(); merge_order.pop();
+				merge_mid = (merge_begin + merge_end) / 2;
+				index2 = merge_mid+1;
+			}
+		}
+		else
+		{
+			if (index2 == merge_end)
+			{
+
+			}
+			if (index1 == merge_mid)
+			{
+				event2 = 1;
+			}
+			if (index1 == merge_mid && index2 == merge_end)
+			{
+				event3 = 1;
+			}
+		}
 	}
 	if (event2)
 	{
