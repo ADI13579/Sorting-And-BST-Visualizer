@@ -33,7 +33,7 @@ public:
 	void stack_rev();
 	dat* temp_merge_array;
 	stack<int> merge_order;
-	int merge_begin, merge_end,index;
+	int merge_begin, merge_end,index,index1,index2,merge_mid;
 
 
 	void shuffle();

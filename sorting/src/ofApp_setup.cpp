@@ -1,5 +1,5 @@
 #include "ofApp.h"
-//--------------------------------------------------------------
+//------------------------------------------------------------------------
 void ofApp::setup() 
 {
 	span = (int)(4.5*factor);
@@ -45,7 +45,8 @@ void ofApp::shuffle()
 	event = event1 = event2 = event3 = 0;
 	ii = number;
 	pos2 = 1;
-	index=count = pos = 0;
+	index=index2=index1=count = pos = 0;
+	merge_begin = merge_end = merge_mid = -1;
 	j = -1;
 	setColor[2] = setColor[1] = setColor[0] = -1;
 

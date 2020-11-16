@@ -85,7 +85,7 @@ void ofApp::keyPressed(int key) {
 		set_merge_order(&merge_order, 0, number - 1);
 		stack_rev();
 		temp_merge_array = new dat[number];
-		event2 = 1;
+		event1 = 1;
 		*temp_merge_array = *array;
 		bool_merge_sort = 1;
 	}
