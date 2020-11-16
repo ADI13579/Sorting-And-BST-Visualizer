@@ -1,23 +1,32 @@
 #include"ofApp.h"
 
-void ofApp::merge__sort_operation()
+void ofApp::merge_sort_operation()
 {
-	
+
 }
 void ofApp::merge_sort()
 {
 	if (event1) 
 	{
-		event1 = animate->moveTo(&array[merge_begin], merge_end);
-		
+		merge_sort_operation();
 	}
-	else if(!event1 && !merge_order.empty())
+	if (event2)
 	{
-		merge_begin = merge_order.top();
-		merge_order.pop();
-		merge_end = merge_order.top();
-		merge_order.pop();
-		event1 = animate->moveTo(&array[merge_begin], merge_end);
+		event2= animate->moveTo(&array[1], 5);
+		if (!event2)
+			event1 = 1;
+	}
+	if (event3)
+	{
+		for (int i = merge_begin; i < merge_end; i++)
+		{
+			event3 = animate->moveDown(&array[i]);
+		}
+		if (!event3)
+		{
+			*array = *temp_merge_array;
+			event1 = 1;
+		}
 	}
 }
 

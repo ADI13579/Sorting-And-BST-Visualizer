@@ -27,7 +27,7 @@ public:
 	void insertion__sort_operation();
 	void insertion_sort();
 
-	void merge__sort_operation();
+	void merge_sort_operation();
 	void merge_sort();
 	void set_merge_order(stack<int> *merge_order,int left,int right);
 	void stack_rev();
