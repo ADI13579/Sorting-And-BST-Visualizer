@@ -27,6 +27,7 @@ void ofApp::setup()
 	st[4] = "Press M to return to menu";
 	st[5] = "Enter Data First";
 	menu = 1;
+
 	bool_bubble_sort=bool_selection_sort=bool_insertion_sort=bool_merge_sort=0;
 	animate = new rectOperate(&span, move, scale,number);
 	
@@ -44,7 +45,7 @@ void ofApp::shuffle()
 	event = event1 = event2 = event3 = 0;
 	ii = number;
 	pos2 = 1;
-	count = pos = 0;
+	index=count = pos = 0;
 	j = -1;
 	setColor[2] = setColor[1] = setColor[0] = -1;
 
