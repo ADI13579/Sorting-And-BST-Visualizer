@@ -83,6 +83,9 @@ void ofApp::keyPressed(int key) {
 	{
 		menu = 0;
 		set_merge_order(&merge_order, 0, number - 1);
+		stack_rev();
+		temp_merge_array = new dat[number];
+		*temp_merge_array = *array;
 		bool_merge_sort = 1;
 	}
 	else if (key == 'r' && menu!=1)
@@ -91,9 +94,11 @@ void ofApp::keyPressed(int key) {
 	}
 	else if (key == 'm')
 	{
+		free(temp_merge_array);
+		free(array);
+		cout << array[0].dat;
 		setup();
 		menu = 1;
 		bool_selection_sort = bool_bubble_sort = bool_insertion_sort = 0;
 	}
-	
 }

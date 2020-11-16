@@ -9,8 +9,7 @@ void ofApp::merge_sort()
 	if (event1) 
 	{
 		event1 = animate->moveTo(&array[merge_begin], merge_end);
-		if(!event1)
-			swap(&array[merge_begin],&array[merge_end]);
+		
 	}
 	else if(!event1 && !merge_order.empty())
 	{
@@ -21,14 +20,8 @@ void ofApp::merge_sort()
 		event1 = animate->moveTo(&array[merge_begin], merge_end);
 	}
 }
-void ofApp::swap(dat *array1,dat *array2)
-{
-	dat *temp;
-	temp = new dat;
-	*temp = *array1;
-	*array1 =*array2;
-	*array2 = *temp;
-}
+
+
 void ofApp::set_merge_order(stack<int>* merge_order, int left,int right)
 {
 	int mid;
@@ -38,8 +31,19 @@ void ofApp::set_merge_order(stack<int>* merge_order, int left,int right)
 		mid = (left + right) / 2;
 		set_merge_order(merge_order, left, mid);
 		set_merge_order(merge_order, mid + 1, right);
-		cout << "    " << left << "  " << right;
 		merge_order->push(left);
 		merge_order->push(right);
 	}
+}
+
+void ofApp::stack_rev()
+{
+	stack<int> temp1;
+	temp1=merge_order;
+	while (!merge_order.empty())
+	{
+		temp1.push(merge_order.top());
+		merge_order.pop();
+	}
+	merge_order = temp1;
 }

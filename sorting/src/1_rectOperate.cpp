@@ -61,6 +61,8 @@ bool rectOperate::moveTo(dat* array,int index)
 	}
 	if (!b)
 	{	
+		array->xpos = x;
+		array->pos.x = x;
 		array->pos.y=move.y-array->size.y;
 	}
 

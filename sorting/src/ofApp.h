@@ -30,7 +30,8 @@ public:
 	void merge__sort_operation();
 	void merge_sort();
 	void set_merge_order(stack<int> *merge_order,int left,int right);
-	void swap(dat *array1,dat *array2);
+	void stack_rev();
+	dat* temp_merge_array;
 	stack<int> merge_order;
 	int merge_begin, merge_end;
 
