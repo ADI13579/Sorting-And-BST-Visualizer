@@ -12,9 +12,14 @@ void ofApp::merge_sort()
 	}
 	if (event2)
 	{
-		event2= animate->moveTo(&array[1], 5);
+		event2= animate->moveTo(array, 5);
 		if (!event2)
+		{
+			temp_merge_array[index] = *array;
+			temp_merge_array[index].pos.y = ofGetHeight()-temp_merge_array[index].size.y;
+			index++;
 			event1 = 1;
+		}
 	}
 	if (event3)
 	{
