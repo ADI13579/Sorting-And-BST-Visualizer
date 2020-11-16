@@ -30,7 +30,7 @@ void ofApp::setup()
 	bool_bubble_sort=bool_selection_sort=bool_insertion_sort=bool_merge_sort=0;
 	animate = new rectOperate(&span, move, scale,number);
 	
-	array = new dat[number + 1];
+	array = new dat[number];
 	for (int i = 0; i < number; i++)
 		array[i].dat = i + 1;
 
