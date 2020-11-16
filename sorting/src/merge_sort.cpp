@@ -34,10 +34,12 @@ void ofApp::set_merge_order(stack<int>* merge_order, int left,int right)
 	int mid;
 	if (left < right)
 	{
-		merge_order->push(left);
-		merge_order->push(right);
+		
 		mid = (left + right) / 2;
 		set_merge_order(merge_order, left, mid);
 		set_merge_order(merge_order, mid + 1, right);
+		cout << "    " << left << "  " << right;
+		merge_order->push(left);
+		merge_order->push(right);
 	}
 }
