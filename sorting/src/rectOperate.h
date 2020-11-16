@@ -23,7 +23,6 @@ public:
 		bool moveUp(dat * array);
 		bool moveDown(dat * array);
 		bool moveTo(dat* array,int x);
-
 	//=======================================================
 
 
