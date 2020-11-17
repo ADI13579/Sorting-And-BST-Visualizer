@@ -1,10 +1,5 @@
 #include"ofApp.h"
 
-void ofApp::merge_sort_operation()
-{
-
-}
-
 void ofApp::merge_sort()
 {
 	for (int i = 0; i < number; i++)
@@ -69,13 +64,13 @@ void ofApp::merge_sort()
 			}
 			if (left >= merge_mid + 1 && right >= merge_end + 1)
 			{
-				cout << "event 1 to be calld" << endl;
+				cout << "event 1 to be called" << endl;
 				event1 = 1;
 			}
 			else
 			{
 				event2 = 1;
-				cout << "event 2 to be calld" << endl;
+				cout << "event 2 to be called" << endl;
 
 			}
 		}
@@ -100,8 +95,8 @@ void ofApp::merge_setup()
 	{
 		merge_order.pop();
 	}
-	set_merge_order(&merge_order, 0, number - 1);
 	temp_merge_array = new dat[number];
+	set_merge_order(&merge_order, 0, number - 1);
 	stack_rev();
 	for (int i = 0; i < number; i++)
 			temp_merge_array[i] = array[i];
