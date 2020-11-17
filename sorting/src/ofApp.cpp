@@ -1,6 +1,5 @@
 #include "ofApp.h"
 
-
 //--------------------------------------------------------------
 void ofApp::update() {
 	span = 5 * factor;
@@ -39,18 +38,18 @@ void ofApp::draw()
 	 
 	if (menu)
 	{
-		font.drawString(st[5], (ofGetWidth() / 2 - font.stringWidth(st[5]) / 2),40);
+		font.drawString(st[6], (ofGetWidth() / 2 - font.stringWidth(st[6]) / 2),40);
 		gui.setPosition(ofGetWidth() / 2 - gui.getWidth() / 2,42);
 		gui.draw();
 		
-		for(int i=0;i<3;i++)
+		for(int i=0;i<4;i++)
 			font.drawString(st[i], (ofGetWidth()/2-font.stringWidth(st[i])/2),(4+i)*40);
 	}
 	else
 	{
 		gui2.draw();
-		font.drawString(st[3], (ofGetWidth() / 2 - font.stringWidth(st[4]) / 2),170);
-		font.drawString(st[4], (ofGetWidth() / 2 - font.stringWidth(st[4]) / 2), 210);
+		font.drawString(st[4], (ofGetWidth() / 2 - font.stringWidth(st[4]) / 2),170);
+		font.drawString(st[5], (ofGetWidth() / 2 - font.stringWidth(st[5]) / 2), 210);
 		for (int i = 0; i < number; i++)
 		{
 			if (i == setColor[0] || i == setColor[1] || i == setColor[2])
