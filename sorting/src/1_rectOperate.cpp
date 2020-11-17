@@ -38,11 +38,22 @@ bool rectOperate::moveUp(dat* array)
 	return 0;
 }
 
-bool rectOperate::moveTo(dat* array,int index,dat *temp_merge_array)
+bool rectOperate::moveDown(dat* array)
 {
-	bool  b=0;
-	float x = (index+1)*scale.x;
-	//*span = *span /5 ;
+	if ((ofGetHeight() - array->size.y )< array->pos.y)
+	{
+		array->pos.y = ofGetHeight() - array->size.y;
+		return 0;
+	}
+	array->pos.y += *span;
+	return 1;
+}
+
+bool rectOperate::moveTo(dat* array, int index, dat* temp_merge_array)
+{
+	bool  b = 0;
+	float x = (index + 1) * scale.x;
+	*span = *span / 2;
 	if (array->xpos > x)
 	{
 		cout << array->xpos << "    " << x << endl;
@@ -50,19 +61,19 @@ bool rectOperate::moveTo(dat* array,int index,dat *temp_merge_array)
 		b = moveLeft(array, x);
 		if (b)
 		{
-			array->pos.y = -((move.y / (x - array->xpos)) * array->pos.x) + (ofGetHeight() - array->size.y + ((move.y) / (x-array->xpos)) * array->xpos);//y=mx formso that moves in diagonal
+			array->pos.y = -((move.y / (x - array->xpos)) * array->pos.x) + (ofGetHeight() - array->size.y + ((move.y) / (x - array->xpos)) * array->xpos);//y=mx formso that moves in diagonal
 		}
 	}
-	else if(array->xpos<x)
+	else if (array->xpos < x)
 	{
 		cout << "called2";
 		b = moveRight(array, x);
 		if (b)
 		{
-			array->pos.y = -((move.y / (x - array->xpos)) * array->pos.x) + (ofGetHeight() - array->size.y + ((move.y) /( x-array->xpos)) * array->xpos);//y=mx formso that moves in diagonal
+			array->pos.y = -((move.y / (x - array->xpos)) * array->pos.x) + (ofGetHeight() - array->size.y + ((move.y) / (x - array->xpos)) * array->xpos);//y=mx formso that moves in diagonal
 		}
 	}
-	else if(array->xpos==x)
+	else if (array->xpos == x)
 	{
 		b = moveUp(array);
 	}
@@ -74,18 +85,7 @@ bool rectOperate::moveTo(dat* array,int index,dat *temp_merge_array)
 		}
 		array->xpos = array->pos.x;
 		temp_merge_array[index] = *array;
-		temp_merge_array[index].pos.y=ofGetHeight()-array->size.y;
+		temp_merge_array[index].pos.y = ofGetHeight() - array->size.y;
 	}
 	return  b;
-}
-
-bool rectOperate::moveDown(dat* array)
-{
-	if ((ofGetHeight() - array->size.y )< array->pos.y)
-	{
-		array->pos.y = ofGetHeight() - array->size.y;
-		return 0;
-	}
-	array->pos.y += *span;
-	return 1;
 }
