@@ -38,34 +38,40 @@ bool rectOperate::moveUp(dat* array)
 	return 0;
 }
 
-bool rectOperate::moveTo(dat* array,int index1)
+bool rectOperate::moveTo(dat* array,int index,dat *temp_merge_array)
 {
 	bool  b;
-	int x = (index1+1)*scale.x;
+	float x = (index+1)*scale.x;
 	*span = *span / 5;
 	if (array->xpos > x)
 	{
+		cout << array->xpos << "    " << x << endl;
+		cout << "Called1";
 		b = moveLeft(array, x);
 		if (b)
 		{
 			array->pos.y = -((move.y / (x - array->xpos)) * array->pos.x) + (ofGetHeight() - array->size.y + ((move.y) / (x-array->xpos)) * array->xpos);//y=mx formso that moves in diagonal
 		}
 	}
-	else
+	else if(array->xpos<x)
 	{
+		cout << "called2";
 		b = moveRight(array, x);
 		if (b)
 		{
 			array->pos.y = -((move.y / (x - array->xpos)) * array->pos.x) + (ofGetHeight() - array->size.y + ((move.y) /( x-array->xpos)) * array->xpos);//y=mx formso that moves in diagonal
 		}
 	}
-	if (!b)
-	{	
-		array->xpos = x;
-		array->pos.x = x;
-		array->pos.y=move.y-array->size.y;
+	else if(array->xpos==x)
+	{
+		b = moveUp(array);
 	}
-
+	if (!b)
+	{
+		array->xpos = array->pos.x;
+		temp_merge_array[index] = *array;
+		temp_merge_array[index].pos.y=ofGetHeight()-array->size.y;
+	}
 	return  b;
 }
 
