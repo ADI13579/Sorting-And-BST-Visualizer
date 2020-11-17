@@ -31,6 +31,7 @@ public:
 	void merge_sort();
 	void set_merge_order(stack<int> *merge_order,int left,int right);
 	void stack_rev();
+	void merge_setup();
 	dat* temp_merge_array;
 	stack<int> merge_order;
 	int merge_begin, merge_end,index,left,right,merge_mid;

@@ -60,7 +60,6 @@ void ofApp::merge_sort()
 			}
 			else if ((array[right].dat < array[left].dat && right<merge_end+1)||(left==merge_mid+1 && right<merge_end+1))
 			{
-				cout << "AM i called";
 				event2 = animate->moveTo(&array[right], index, temp_merge_array);
 				if (!event2)
 				{
@@ -82,74 +81,7 @@ void ofApp::merge_sort()
 		}
 }
 
-//void ofApp::merge_sort()
-//{
-//	if (event1) 
-//	{
-//		if (merge_begin == merge_end == merge_mid == -1)
-//		{
-//			if (!merge_order.empty())
-//			{
-//				left=merge_begin = merge_order.top(); merge_order.pop();
-//				merge_end = merge_order.top(); merge_order.pop();
-//				merge_mid = (merge_begin + merge_end) / 2;
-//				right = merge_mid+1;
-//			}
-//
-//		}
-//		else
-//		{
-//			if (right == merge_end)
-//			{
-//
-//			}
-//			if (left == merge_mid)
-//			{
-//				event2 = 1;
-//			}
-//			if (left == merge_mid && right == merge_end)
-//			{
-//				event3 = 1;
-//			}
-//		}
-//	}
-//	if (event2)
-//	{
-//		if (array[right].dat < array[left].dat)
-//			event2 = animate->moveTo(&array[right], left);
-//		else if (array[right].dat > array[left].dat)
-//			event2 = animate->moveTo(&array[left], left);
-//		else if (left == merge_mid)
-//		{
-//			for (int i = right; i < merge_end; i++)
-//			{
-//				animate->moveTo(&array[],);
-//			}
-//		}
-//		if (!event2)
-//		{
-//			temp_merge_array[index] = *array;
-//			temp_merge_array[index].pos.y = ofGetHeight()-temp_merge_array[index].size.y;
-//			index++;
-//			event1 = 1;
-//		}
-//	}
-//	if (event3)
-//	{
-//		for (int i = merge_begin; i < merge_end; i++)
-//		{
-//			event3 = animate->moveDown(&array[i]);
-//		}
-//		if (!event3)
-//		{
-//			*array = *temp_merge_array;
-//			event1 = 1;
-//		}
-//	}
-//}
-
-
-void ofApp::set_merge_order(stack<int>* merge_order, int left,int right)
+void ofApp::set_merge_order(stack<int>* merge_order,int left,int right)
 {
 	int mid;
 	if (left < right)
@@ -162,7 +94,18 @@ void ofApp::set_merge_order(stack<int>* merge_order, int left,int right)
 		merge_order->push(right);
 	}
 }
-
+void ofApp::merge_setup()
+{
+	while (!merge_order.empty())
+	{
+		merge_order.pop();
+	}
+	set_merge_order(&merge_order, 0, number - 1);
+	temp_merge_array = new dat[number];
+	stack_rev();
+	for (int i = 0; i < number; i++)
+			temp_merge_array[i] = array[i];
+}
 void ofApp::stack_rev()
 {
 	stack<int> temp1;

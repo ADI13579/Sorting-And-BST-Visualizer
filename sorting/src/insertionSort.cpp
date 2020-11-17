@@ -33,7 +33,6 @@ void ofApp::insertion_sort()
 			setColor[1] = -1;
 		}
 
-
 		if (event2)
 		{
 			event2 = animate->rectSwap(&array[pos2], &array[pos2 - 1]);
