@@ -41,6 +41,7 @@ void ofApp::setup()
 
 void ofApp::shuffle()
 {
+	
 	button = 0;
 	event = event1 = event2 = event3 = 0;
 	ii = number;
@@ -68,4 +69,9 @@ void ofApp::shuffle()
 		array[i].pos = { (scale.x * (i + 1)),(float)(ofGetHeight() - array[i].size.y) };
 		array[i].xpos = array[i].pos.x;
 	};
+	if (bool_merge_sort)
+	{
+		event1 = 1;
+		merge_setup();
+	}
 }
