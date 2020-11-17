@@ -22,7 +22,7 @@ public:
 		bool moveLeft(dat * array, float point_x);
 		bool moveUp(dat * array);
 		bool moveDown(dat * array);
-		bool moveTo(dat* array,int x);
+		bool moveTo(dat* array,int x,dat *temp_merge_array);
 	//=======================================================
 
 
