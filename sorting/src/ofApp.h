@@ -13,8 +13,6 @@ public:
 	void setup();
 	void update();
 	void draw();
-	
-
 	void keyPressed(int key);
 	
 	
@@ -27,7 +25,6 @@ public:
 	void insertion__sort_operation();
 	void insertion_sort();
 
-	void merge_sort_operation();
 	void merge_sort();
 	void set_merge_order(stack<int> *merge_order,int left,int right);
 	void stack_rev();
@@ -42,7 +39,7 @@ public:
 	int ii,j,count,pos,pos2;
 
 	
-	string st[6];
+	string st[7];
 	bool event,menu;
 	bool event1, event2, event3;
 	bool bool_bubble_sort,bool_selection_sort,bool_insertion_sort,bool_merge_sort;

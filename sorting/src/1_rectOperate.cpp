@@ -40,9 +40,9 @@ bool rectOperate::moveUp(dat* array)
 
 bool rectOperate::moveTo(dat* array,int index,dat *temp_merge_array)
 {
-	bool  b;
+	bool  b=0;
 	float x = (index+1)*scale.x;
-	*span = *span / 5;
+	//*span = *span /5 ;
 	if (array->xpos > x)
 	{
 		cout << array->xpos << "    " << x << endl;
@@ -68,6 +68,10 @@ bool rectOperate::moveTo(dat* array,int index,dat *temp_merge_array)
 	}
 	if (!b)
 	{
+		if (array->pos.y < move.y - array->size.y)
+		{
+			array->pos.y = move.y - array->size.y;
+		}
 		array->xpos = array->pos.x;
 		temp_merge_array[index] = *array;
 		temp_merge_array[index].pos.y=ofGetHeight()-array->size.y;

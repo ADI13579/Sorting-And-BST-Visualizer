@@ -23,9 +23,10 @@ void ofApp::setup()
 	st[0] = "Press 1 for Bubble Sort";
 	st[1] = "Press 2 for Selection Sort";
 	st[2] = "Press 3 for Insertion Sort";
-	st[3] = "Press R to interupt/shuffle";
-	st[4] = "Press M to return to menu";
-	st[5] = "Enter Data First";
+	st[3] = "Press 4 for Merge sort";
+	st[4] = "Press R to interupt/shuffle";
+	st[5] = "Press M to return to menu";
+	st[6] = "Enter Data First";
 	menu = 1;
 
 	bool_bubble_sort=bool_selection_sort=bool_insertion_sort=bool_merge_sort=0;
