@@ -30,7 +30,7 @@ public:
 	void stack_rev();
 	void merge_setup();
 	dat* temp_merge_array;
-	stack<int> merge_order;
+	stack<int> merge_order,merge_order_copy;
 	int merge_begin, merge_end,index,left,right,merge_mid;
 
 
@@ -45,7 +45,7 @@ public:
 	bool bool_bubble_sort,bool_selection_sort,bool_insertion_sort,bool_merge_sort;
 	
 	dat *array;
-	int span;
+	float span;
 	ofVec2f move;
 	int number;
 	ofVec2f scale;
@@ -62,4 +62,6 @@ public:
 	ofxPanel gui2;
 	ofxToggle button;
 	ofxIntSlider factor;
+
+	int temp;
 };

@@ -4,12 +4,12 @@
 class rectOperate
 {
 private:
-	int *span;
+	float *span;
 	ofVec2f move;
 	ofVec2f scale;
 	int number;
 public:
-	rectOperate(int* _span, ofVec2f screen_size_half,ofVec2f scale_of_bars,int num)
+	rectOperate(float* _span, ofVec2f screen_size_half,ofVec2f scale_of_bars,int num)
 	{
 		span = _span;
 		move = screen_size_half;
