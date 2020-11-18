@@ -55,12 +55,12 @@ bool rectOperate::moveTo(dat* array, int index, dat* temp_merge_array)
 	float x = (index + 1) * scale.x;
 	if (array->xpos > x)
 	{
-		*span = *span/7;
+		*span = *span/10;
 		b = moveLeft(array, x);
 	}
 	else if (array->xpos < x)
 	{
-		*span =*span/7;
+		*span =*span/10;
 		b = moveRight(array, x);
 	}
 
