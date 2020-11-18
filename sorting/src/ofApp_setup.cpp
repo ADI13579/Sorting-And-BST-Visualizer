@@ -41,8 +41,7 @@ void ofApp::setup()
 }
 
 void ofApp::shuffle()
-{
-	
+{	
 	button = 0;
 	event = event1 = event2 = event3 = 0;
 	ii = number;
