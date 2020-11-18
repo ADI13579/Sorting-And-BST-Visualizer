@@ -27,10 +27,11 @@ public:
 
 	void merge_sort();
 	void set_merge_order(stack<int> *merge_order,int left,int right);
-	void stack_rev();
+	void stack_rev(stack<int> *order);
 	void merge_setup();
+	void merge_set_color();
 	dat* temp_merge_array;
-	stack<int> merge_order,merge_order_copy;
+	stack<int> merge_order,set_color;
 	int merge_begin, merge_end,index,left,right,merge_mid;
 
 
@@ -38,7 +39,17 @@ public:
 	
 	int ii,j,count,pos,pos2;
 
-	
+	void display(stack<int> order)
+	{
+		stack<int> temp;
+		while (!order.empty())
+		{
+			cout << order.top() << "       ";
+			order.pop();
+		}
+		cout << endl;
+	}
+
 	string st[7];
 	bool event,menu;
 	bool event1, event2, event3;
