@@ -52,14 +52,22 @@ void ofApp::draw()
 		
 			for (int i = 0; i < number; i++)
 			{
-				if (i == setColor[0] || i == setColor[1] || i == setColor[2])
-					ofSetColor(242, 60, 112);
-				else if (i >= merge_begin && i <= merge_mid)
-					ofSetColor(242, 60, 112);
-				else if (i > merge_mid&& i <= merge_end)
-					ofSetColor(101,103,224);
+				if (!bool_merge_sort)
+				{
+					if (i == setColor[0] || i == setColor[1] || i == setColor[2])
+						ofSetColor(242, 60, 112);
+					else
+						ofSetColor(145, 224, 215);
+				}
 				else
-					ofSetColor(145, 224, 215);
+				{
+					if (i > merge_mid&& i <= merge_end)
+						ofSetColor(229, 234, 75);
+					else if (i >= merge_begin && i <= merge_mid)
+						ofSetColor(237, 124, 99);
+					else
+						ofSetColor(145,224,215);
+				}
 				ofDrawRectangle(array[i].pos, array[i].size.x, array[i].size.y);
 			}
 		
