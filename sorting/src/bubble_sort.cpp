@@ -1,6 +1,5 @@
 #include"ofApp.h"
 
-
 void ofApp::bubble_sort_operation()
 {
 	setColor[0] = j;
