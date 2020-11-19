@@ -25,10 +25,10 @@ void ofApp::bubble_sort()
 	}
 	else
 	{
-		if (j == ii - 2)
+		if (j == pos1 - 2)
 		{
 			j = 0;
-			ii--;
+			pos1--;
 			count++;
 		}
 		else

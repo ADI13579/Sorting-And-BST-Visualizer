@@ -37,7 +37,7 @@ public:
 
 	void shuffle();
 	
-	int ii,j,count,pos,pos2;
+	int j,count,pos,pos1,pos2;
 
 	void display(stack<int> order)
 	{
