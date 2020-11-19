@@ -16,9 +16,9 @@ public:
 	void keyPressed(int key);
 	
 	
-	void selection_sort_operation();
-	void selection_sort();
-
+		void selection_sort_operation();
+		void selection_sort();
+		
 	void bubble_sort_operation();
 	void bubble_sort();
 
