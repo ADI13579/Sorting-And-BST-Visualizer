@@ -3,7 +3,7 @@
 void ofApp::setup() 
 {
 	span = (int)(4.5*factor);
-	filesystem::path p = "../data/font1.ttf";
+	filesystem::path p = "../font.ttf";
 	gui.setDefaultHeight(38);
 	gui.setDefaultWidth(400);
 	intField.setBackgroundColor(ofColor(2500, 0, 0));
