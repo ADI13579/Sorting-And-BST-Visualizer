@@ -14,14 +14,15 @@ public:
 	void update();
 	void draw();
 	void keyPressed(int key);
-	
-	
-		void selection_sort_operation();
-		void selection_sort();
-		
+
+
 	void bubble_sort_operation();
 	void bubble_sort();
 
+	void selection_sort_operation();
+	void selection_sort();
+		
+	
 	void insertion__sort_operation();
 	void insertion_sort();
 
