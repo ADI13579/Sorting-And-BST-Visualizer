@@ -14,6 +14,7 @@ public:
 	void update();
 	void draw();
 	void keyPressed(int key);
+	void shuffle();
 
 
 	void bubble_sort_operation();
@@ -30,26 +31,13 @@ public:
 	void set_merge_order(stack<int> *merge_order,int left,int right);
 	void stack_rev(stack<int> *order);
 	void merge_setup();
-	void merge_set_color();
 	dat* temp_merge_array;
 	stack<int> merge_order,set_color;
 	int merge_begin, merge_end,index,left,right,merge_mid;
 
 
-	void shuffle();
 	
 	int j,count,pos,pos1,pos2;
-
-	void display(stack<int> order)
-	{
-		stack<int> temp;
-		while (!order.empty())
-		{
-			cout << order.top() << "       ";
-			order.pop();
-		}
-		cout << endl;
-	}
 
 	string st[7];
 	bool event,menu;

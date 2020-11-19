@@ -30,7 +30,6 @@ void ofApp::merge_sort()
 					merge_order.pop();
 					merge_mid = (merge_begin + merge_end) / 2;
 					right = merge_mid + 1;
-					merge_set_color();
 					event2 = 1;
 				}
 			}
@@ -75,7 +74,6 @@ void ofApp::merge_setup()
 	temp_merge_array = new dat[number];
 	set_merge_order(&merge_order, 0, number - 1);
 	stack_rev(&merge_order);
-	merge_set_color();
 	for (int i = 0; i < number; i++)
 		temp_merge_array[i] = array[i];
 }
@@ -91,24 +89,7 @@ void ofApp::set_merge_order(stack<int>* merge_order,int left,int right)
 		merge_order->push(right);
 	}
 }
-void ofApp::merge_set_color()
-{
-	stack<int> temp = merge_order;
-	while (!set_color.empty())
-	{
-		set_color.pop();
-	}
-	set_color.push(0);
-	while(!temp.empty())
-	{
-		if (set_color.top() < temp.top())
-		{
-			set_color.push(temp.top());
-		}
-		temp.pop();
-	}
-	stack_rev(&set_color);
-}
+
 
 void ofApp::stack_rev(stack<int> *order)
 {
