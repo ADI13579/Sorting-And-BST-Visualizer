@@ -6,8 +6,7 @@ int main( ){
 	int screen_height=GetSystemMetrics(SM_CXSCREEN);
 	int screen_width= GetSystemMetrics(SM_CYSCREEN);
 
-
-	ofSetupOpenGL(1920,1080,OF_GAME_MODE);		// <-------- setup the GL context
+	ofSetupOpenGL(screen_height,screen_width,OF_GAME_MODE);		// <-------- setup the GL context
 	// this kicks off the running of my app
 	// can be OF_WINDOW or OF_FULLSCREEN
 	// pass in width and height too:
