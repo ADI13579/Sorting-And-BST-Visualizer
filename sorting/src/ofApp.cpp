@@ -7,19 +7,23 @@ void ofApp::update() {
 	{
 		if (bool_bubble_sort)
 		{
+			prev_bool_bubble_sort = bool_bubble_sort;
 			bool_bubble_sort=bubble_sort->bubble_sort();
 		}
 		if (bool_selection_sort)
 		{
+			prev_bool_selection_sort = bool_selection_sort;
 			bool_selection_sort=selection_sort->selection_sort();
 		}
 		if (bool_insertion_sort)
 		{
+			prev_bool_insertion_sort = bool_insertion_sort;
 			bool_insertion_sort=insertion_sort->insertion_sort();
 		}
 		if (bool_merge_sort)
 		{
-			merge_sort();
+			prev_bool_merge_sort = bool_merge_sort;
+			merge_sort->merge_sort();
 		}
 	}
 	
@@ -61,6 +65,10 @@ void ofApp::draw()
 				}
 				else
 				{
+					int merge_begin = merge_sort->merge_begin;
+					int merge_mid = merge_sort->merge_mid;
+					int merge_end = merge_sort->merge_end;
+
 					if (i > merge_mid&& i <= merge_end)
 						ofSetColor(229, 234, 75);
 					else if (i >= merge_begin && i <= merge_mid)
@@ -81,32 +89,65 @@ void ofApp::keyPressed(int key)
 	{
 		menu = 0;
 		bubble_sort = new bubblesort(&array[0], number,animate,&setColor[0],&button,&factor);
-		bool_bubble_sort = 1;
+		bool_bubble_sort =prev_bool_bubble_sort= 1;
 	}
 	if (key == '2' && menu)
 	{
 		menu = 0;
-		bool_selection_sort = 1;
+		bool_selection_sort =prev_bool_selection_sort= 1;
 		selection_sort = new selectionsort(&array[0], number, animate, &setColor[0], &button, &factor);
 	}
 	if (key == '3' && menu)
 	{
 		menu = 0;
-		bool_insertion_sort = 1;
+		bool_insertion_sort = prev_bool_insertion_sort=1;
 		insertion_sort= new insertionsort(&array[0], number, animate, &setColor[0], &button, &factor);
 	}
 	if (key == '4' && menu)
 	{
 		menu = 0;
-		merge_setup();
-		bool_merge_sort = event1=1;
+		merge_sort = new mergesort(&array[0], number, animate, &button, &factor);
+		bool_merge_sort =prev_bool_merge_sort=1;
 	}
-	else if (key == 'r' && menu!=1)
+	else if (key == 'r' && menu != 1)
 	{
 		shuffle();
+		if (prev_bool_bubble_sort)
+		{
+			bool_bubble_sort = 1;
+			free(bubble_sort);
+			bubble_sort = new bubblesort(&array[0], number, animate, &setColor[0], &button, &factor);
+		}
+		else if(prev_bool_selection_sort)
+		{
+			bool_selection_sort = 1;
+			free(selection_sort);
+			selection_sort = new selectionsort(&array[0], number, animate, &setColor[0], &button, &factor);
+		}
+		else if (prev_bool_insertion_sort)
+		{
+			bool_insertion_sort = 1;
+			free(insertion_sort);
+			insertion_sort = new insertionsort(&array[0], number, animate, &setColor[0], &button, &factor);
+		}
+		else if(prev_bool_merge_sort)
+		{
+			bool_merge_sort = 1;
+			free(merge_sort);
+			merge_sort = new mergesort(&array[0], number, animate, &button, &factor);
+		}
 	}
 	else if (key == 'm')
 	{
+		if (prev_bool_bubble_sort)
+			free(bubble_sort);
+		else if (prev_bool_selection_sort)
+			free(selection_sort);
+		else if (prev_bool_insertion_sort)
+			free(insertion_sort);
+		else if (prev_bool_merge_sort)
+			free(merge_sort);
+
 		setup();
 		menu = 1;
 		bool_selection_sort = bool_bubble_sort = bool_insertion_sort = 0;

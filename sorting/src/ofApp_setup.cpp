@@ -43,15 +43,6 @@ void ofApp::setup()
 void ofApp::shuffle()
 {	
 	button = 0;
-	event = event1 = event2 = event3 = 0;
-	pos1 = number;
-	pos2 = 1;
-	index = right = left = count = pos = 0;
-	merge_begin = merge_end = merge_mid = -1;
-	j = -1;
-	setColor[2] = setColor[1] = setColor[0] = -1;
-
-
 	for (int i = 0; i < number; i++)
 	{
 		int swap1 = (int)ofRandom(number);
@@ -69,9 +60,4 @@ void ofApp::shuffle()
 		array[i].pos = { (scale.x * (i + 1)),(float)(ofGetHeight() - array[i].size.y) };
 		array[i].xpos = array[i].pos.x;
 	};
-	if (bool_merge_sort)
-	{
-		event1 = 1;
-		merge_setup();
-	}
 }
