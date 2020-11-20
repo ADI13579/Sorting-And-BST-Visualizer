@@ -141,6 +141,7 @@ public:
 	void update();
 	void draw();
 	void keyPressed(int key);
+	void insertData();
 	void shuffle();
 
 
@@ -149,10 +150,8 @@ public:
 	insertionsort* insertion_sort;
 	mergesort* merge_sort;
 
-
-
-	
 	string st[7];
+
 	bool menu;
 	
 	bool bool_bubble_sort,bool_selection_sort,bool_insertion_sort,bool_merge_sort;

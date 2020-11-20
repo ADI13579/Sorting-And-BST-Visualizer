@@ -2,22 +2,25 @@
 //------------------------------------------------------------------------
 void ofApp::setup() 
 {
-	span = (int)(4.5*factor);
+	number = 10;
+	intField = number;
+	
+	menu = 1;
+	bool_bubble_sort = bool_selection_sort = bool_insertion_sort = bool_merge_sort = 0;
+	prev_bool_bubble_sort = prev_bool_selection_sort = prev_bool_insertion_sort = prev_bool_merge_sort = 0;
+
+
 	filesystem::path p = "../font.ttf";
 	gui.setDefaultHeight(38);
 	gui.setDefaultWidth(400);
 	intField.setBackgroundColor(ofColor(2500, 0, 0));
 	gui.setup();
 	
-	gui.add(intField.setup("Add Number of Data", number));
+	gui.add(intField.setup("Add Number of Data", intField));
 	gui2.setup();
 	gui2.add(button.setup("Press to start/pause", 0, 400, 40));;
 	gui2.add(factor.setup("Slide right to increase speed",1,1,100,400,40)); 
 	gui2.setPosition(ofGetWidth() / 2 - gui.getWidth() / 2, 0);
-
-	scale = {(float) ofGetWidth() / (number + 1) ,(float)ofGetHeight() / (2 * (number + 1)) };
-	width = scale.x * 70 / 100; //70% is the width of bar
-	move = { (float)ofGetWidth() / 2,(float)ofGetHeight() / 2 };
 
 	font.load(p,32);
 	st[0] = "Press 1 for Bubble Sort";
@@ -27,17 +30,20 @@ void ofApp::setup()
 	st[4] = "Press R to interupt/shuffle";
 	st[5] = "Press M to return to menu";
 	st[6] = "Enter Data First";
-	menu = 1;
 
-	bool_bubble_sort=bool_selection_sort=bool_insertion_sort=bool_merge_sort=0;
-	animate = new rectOperate(&span, move, scale, number);
-
+	insertData();
+}
+void ofApp::insertData()
+{
+	scale = { (float)ofGetWidth() / (number + 1) ,(float)ofGetHeight() / (2 * (number + 1)) };
+	width = scale.x * 70 / 100; //70% is the width of bar
+	move = { (float)ofGetWidth() / 2,(float)ofGetHeight() / 2 };
+	animate = new rectOperate(&span, move, scale);
 	array = new dat[number];
 	for (int i = 0; i < number; i++)
 		array[i].dat = i + 1;
 
 	shuffle();
-	
 }
 
 void ofApp::shuffle()
