@@ -1,24 +1,26 @@
 #include"ofApp.h"
 
-void ofApp::merge_sort()
+void mergesort::merge_sort()
 {
 		if (event1)
 		{
-			for (int i = merge_begin; i <= merge_end; i++)
-			{
-				event1 = animate->moveDown(&array[i]);
-			}
-			if (merge_begin == -1)
+			if (merge_begin==-1 && merge_end== -1)
 				event1 = 0;
+			else
+			{
+				for (int i = merge_begin; i <= merge_end; i++)
+				{
+					event1 = animate->moveDown(&array[i]);
+				}
+			}
 			if (!event1)
-			{;
+			{
 				for (int i = merge_begin; i <= merge_end; i++)
 				{
 					array[i] = temp_merge_array[i];
 				}
 				if (merge_order.empty())
 				{
-					bool_merge_sort = 0;
 					button = 0;
 					return;
 				}
@@ -65,19 +67,8 @@ void ofApp::merge_sort()
 			}
 		}
 }
-void ofApp::merge_setup()
-{
-	while (!merge_order.empty())
-	{
-		merge_order.pop();
-	}
-	temp_merge_array = new dat[number];
-	set_merge_order(&merge_order, 0, number - 1);
-	stack_rev(&merge_order);
-	for (int i = 0; i < number; i++)
-		temp_merge_array[i] = array[i];
-}
-void ofApp::set_merge_order(stack<int>* merge_order,int left,int right)
+
+void mergesort::set_merge_order(stack<int>* merge_order,int left,int right)
 {
 	int mid;
 	if (left < right)
@@ -91,7 +82,7 @@ void ofApp::set_merge_order(stack<int>* merge_order,int left,int right)
 }
 
 
-void ofApp::stack_rev(stack<int> *order)
+void mergesort::stack_rev(stack<int> *order)
 {
 	stack<int> temp1;
 	while (!order->empty())
