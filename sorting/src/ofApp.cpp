@@ -23,7 +23,7 @@ void ofApp::update() {
 		if (bool_merge_sort)
 		{
 			prev_bool_merge_sort = bool_merge_sort;
-			merge_sort->merge_sort();
+			bool_merge_sort=merge_sort->merge_sort();
 		}
 	}
 	if (intField > number)
@@ -33,15 +33,12 @@ void ofApp::update() {
 		free(animate);
 		insertData();
 	}
-	
-	
 }
 
 
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-	 
 	if (menu)
 	{
 		font.drawString(st[6], (ofGetWidth() / 2 - font.stringWidth(st[6]) / 2),40);
@@ -141,14 +138,6 @@ void ofApp::keyPressed(int key)
 	}
 	else if (key == 'm')
 	{
-		if (prev_bool_bubble_sort)
-			free(bubble_sort);
-		else if (prev_bool_selection_sort)
-			free(selection_sort);
-		else if (prev_bool_insertion_sort)
-			free(insertion_sort);
-		else if (prev_bool_merge_sort)
-			free(merge_sort);
 		bool_selection_sort = bool_bubble_sort = bool_insertion_sort = 0;
 		prev_bool_selection_sort =prev_bool_bubble_sort =prev_bool_insertion_sort = 0;
 		menu = 1;

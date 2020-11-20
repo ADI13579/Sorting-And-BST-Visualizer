@@ -1,6 +1,6 @@
 #include"ofApp.h"
 
-void mergesort::merge_sort()
+bool mergesort::merge_sort()
 {
 		if (event1)
 		{
@@ -22,7 +22,7 @@ void mergesort::merge_sort()
 				if (merge_order.empty())
 				{
 					button = 0;
-					return;
+					return 0;
 				}
 				else
 				{
@@ -66,6 +66,7 @@ void mergesort::merge_sort()
 				event2 = 1;
 			}
 		}
+		return 1;
 }
 
 void mergesort::set_merge_order(stack<int>* merge_order,int left,int right)

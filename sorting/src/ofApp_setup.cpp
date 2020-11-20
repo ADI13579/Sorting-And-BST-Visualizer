@@ -2,6 +2,8 @@
 //------------------------------------------------------------------------
 void ofApp::setup() 
 {
+	setColor[0] = setColor[1] = -1;
+
 	number = 10;
 	intField = number;
 	
