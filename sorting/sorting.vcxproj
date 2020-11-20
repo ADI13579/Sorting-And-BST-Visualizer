@@ -212,7 +212,7 @@
     <ClCompile Include="..\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxSliderGroup.cpp" />
     <ClCompile Include="..\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxToggle.cpp" />
     <ClCompile Include="src\ofApp_setup.cpp" />
-    <ClCompile Include="src\selecttion_sort.cpp" />
+    <ClCompile Include="src\selection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\dat.h" />
@@ -230,6 +230,7 @@
     <ClInclude Include="..\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxSliderGroup.h" />
     <ClInclude Include="..\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxToggle.h" />
     <ClInclude Include="src\rectOperate.h" />
+    <ClInclude Include="src\sort.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
