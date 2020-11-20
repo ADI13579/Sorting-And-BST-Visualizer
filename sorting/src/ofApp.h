@@ -24,19 +24,16 @@ class ofApp : public ofBaseApp {
 
 		string st[7];
 
-		bool menu;
 	
-		bool bool_bubble_sort,bool_selection_sort,bool_insertion_sort,bool_merge_sort;
+		bool menu,bool_bubble_sort,bool_selection_sort,bool_insertion_sort,bool_merge_sort;
 		bool prev_bool_bubble_sort,prev_bool_selection_sort,prev_bool_insertion_sort,prev_bool_merge_sort;
 
 		dat *array;
-		float span;
+		float span,width;
 		ofVec2f move;
-		int number;
+		int number, setColor[3];
 		ofVec2f scale;
-		float width;
 		rectOperate* animate;
-		int setColor[3] ;
 
 		//Panel to take input of number in menu
 		ofxPanel gui;
