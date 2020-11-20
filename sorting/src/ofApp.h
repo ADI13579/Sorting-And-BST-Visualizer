@@ -13,14 +13,14 @@ public:
 	bool event;
 	int* setColor;
 	dat* array;
-	int j,count,pos1,number;
+	int j,count,pos,number;
 	rectOperate* animate;
 	ofxIntSlider* factor;
 	
 	bubblesort(dat* _array, int _number, rectOperate* _animate, int* _setColor, ofxToggle* _button,ofxIntSlider *_factor)
 	{
 		number = _number;
-		pos1 = number;
+		pos = number-1;
 		count = 0;
 		j = -1;
 		array = _array;
@@ -71,7 +71,7 @@ class insertionsort
 		bool event1,event2,event3;
 		int* setColor;
 		dat* array;
-		int j, count, pos, number;
+		int count, pos, number;
 		rectOperate* animate;
 		ofxIntSlider* factor;
 
@@ -80,7 +80,6 @@ class insertionsort
 			number = _number;
 			pos = 1;
 			count = 0;
-			j = -1;
 			array = _array;
 			event1=event2=event3 = 0;
 			animate = _animate;

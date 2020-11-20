@@ -25,10 +25,10 @@ bool bubblesort::bubble_sort()
 	}
 	else
 	{
-		if (j == pos1 - 2)
+		if (j == pos - 1)
 		{
 			j = 0;
-			pos1--;
+			pos--;
 			count++;
 		}
 		else

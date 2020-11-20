@@ -20,7 +20,7 @@ void insertionsort::insertion__sort_operation()
 			event1 = 1;
 		}
 	}
-	this_thread::sleep_for(chrono::milliseconds((int)(500 - 5 * (*factor))));//y=mx+c where m=-0.2,c=500
+	this_thread::sleep_for(chrono::milliseconds((int)(300 - 3 * (*factor))));//y=mx+c where m=-3,c=300
 }
 bool insertionsort::insertion_sort()
 {
