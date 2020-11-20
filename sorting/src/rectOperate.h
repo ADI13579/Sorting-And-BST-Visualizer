@@ -4,17 +4,18 @@
 class rectOperate
 {
 private:
+	bool a, b, c;
 	float *span;
 	ofVec2f move;
 	ofVec2f scale;
-	int number;
 public:
-	rectOperate(float* _span, ofVec2f screen_size_half,ofVec2f scale_of_bars,int num)
+	rectOperate(float* _span, ofVec2f screen_size_half,ofVec2f scale_of_bars)
 	{
+		a = 1;
+		b = c=0;
 		span = _span;
 		move = screen_size_half;
 		scale = scale_of_bars;
-		number = num;
 	};
 	//These are in 1_rectOperate.cpp
 	//==================================
@@ -35,5 +36,5 @@ public:
 		bool rectSwap(dat* array1, dat* array2);
 	//=====================================================
 
-		bool a=1, b=0, c=0;
+		
 };

@@ -26,12 +26,15 @@ void ofApp::update() {
 			merge_sort->merge_sort();
 		}
 	}
-	
-	if (intField > 0 && intField != number)
+	if (intField > number)
 	{
-			number = intField;
-			setup();
+		number = intField;
+		free(array);
+		free(animate);
+		insertData();
 	}
+	
+	
 }
 
 
@@ -78,7 +81,6 @@ void ofApp::draw()
 				}
 				ofDrawRectangle(array[i].pos, array[i].size.x, array[i].size.y);
 			}
-		
 	}
 }
 
@@ -91,19 +93,19 @@ void ofApp::keyPressed(int key)
 		bubble_sort = new bubblesort(&array[0], number,animate,&setColor[0],&button,&factor);
 		bool_bubble_sort =prev_bool_bubble_sort= 1;
 	}
-	if (key == '2' && menu)
+	else if (key == '2' && menu)
 	{
 		menu = 0;
 		bool_selection_sort =prev_bool_selection_sort= 1;
 		selection_sort = new selectionsort(&array[0], number, animate, &setColor[0], &button, &factor);
 	}
-	if (key == '3' && menu)
+	else if (key == '3' && menu)
 	{
 		menu = 0;
 		bool_insertion_sort = prev_bool_insertion_sort=1;
 		insertion_sort= new insertionsort(&array[0], number, animate, &setColor[0], &button, &factor);
 	}
-	if (key == '4' && menu)
+	else if (key == '4' && menu)
 	{
 		menu = 0;
 		merge_sort = new mergesort(&array[0], number, animate, &button, &factor);
@@ -147,9 +149,8 @@ void ofApp::keyPressed(int key)
 			free(insertion_sort);
 		else if (prev_bool_merge_sort)
 			free(merge_sort);
-
-		setup();
-		menu = 1;
 		bool_selection_sort = bool_bubble_sort = bool_insertion_sort = 0;
+		prev_bool_selection_sort =prev_bool_bubble_sort =prev_bool_insertion_sort = 0;
+		menu = 1;
 	}
 }
