@@ -1,7 +1,7 @@
 #include"ofApp.h"
 
 
-void ofApp::selection_sort_operation()
+void selectionsort::selection_sort_operation()
 {
 	setColor[0] = count;
 	setColor[1] = pos;
@@ -17,7 +17,7 @@ void ofApp::selection_sort_operation()
 	}
 }
 
-void ofApp::selection_sort()
+bool selectionsort::selection_sort()
 {
 	if (event)
 	{
@@ -37,8 +37,12 @@ void ofApp::selection_sort()
 		if (count == number - 1)
 		{
 			button = 0;
+			setColor[0] = setColor[1] = -1;
+			return 0;
 		}
-		this_thread::sleep_for(chrono::milliseconds((int)(500 - 5 * factor)));//y=mx+c where m=-5,c=500
+		
+		this_thread::sleep_for(chrono::milliseconds((int)(500 - 5 * (*factor))));//y=mx+c where m=-5,c=500
 		selection_sort_operation();
 	}
+	return 1;
 }

@@ -6,6 +6,91 @@
 #include"rectOperate.h"
 #include<stack>
 
+class bubblesort
+{
+public:
+	ofxToggle* button;
+	bool event;
+	int* setColor;
+	dat* array;
+	int j,count,pos1,number;
+	rectOperate* animate;
+	ofxIntSlider* factor;
+	
+	bubblesort(dat* _array, int _number, rectOperate* _animate, int* _setColor, ofxToggle* _button,ofxIntSlider *_factor)
+	{
+		number = _number;
+		pos1 = number;
+		count = 0;
+		j = -1;
+		array = _array;
+		event = 0;
+		animate = _animate;
+		button = _button;
+		setColor = _setColor;
+		factor = _factor;
+	}
+	void bubble_sort_operation();
+	bool bubble_sort();
+};
+
+class selectionsort
+{
+	public:
+		ofxToggle* button;
+		bool event;
+		int* setColor;
+		dat* array;
+		int j, count, pos, number;
+		rectOperate* animate;
+		ofxIntSlider* factor;
+
+		selectionsort(dat *_array, int _number, rectOperate* _animate, int* _setColor, ofxToggle* _button, ofxIntSlider* _factor)
+		{
+			number = _number;
+			pos= 0;
+			count = 0;
+			j = -1;
+			array = _array;
+			event = 0;
+			animate = _animate;
+			button = _button;
+			setColor = _setColor;
+			factor = _factor;
+		}
+
+		void selection_sort_operation();
+		bool selection_sort();
+		
+};
+
+class insertionsort
+{
+	public:
+		ofxToggle* button;
+		bool event1,event2,event3;
+		int* setColor;
+		dat* array;
+		int j, count, pos, number;
+		rectOperate* animate;
+		ofxIntSlider* factor;
+
+		insertionsort(dat* _array, int _number, rectOperate* _animate, int* _setColor, ofxToggle* _button, ofxIntSlider* _factor)
+		{
+			number = _number;
+			pos = 1;
+			count = 0;
+			j = -1;
+			array = _array;
+			event1=event2=event3 = 0;
+			animate = _animate;
+			button = _button;
+			setColor = _setColor;
+			factor = _factor;
+		}
+		void insertion__sort_operation();
+		bool insertion_sort();
+};
 
 class ofApp : public ofBaseApp {
 
@@ -17,15 +102,11 @@ public:
 	void shuffle();
 
 
-	void bubble_sort_operation();
-	void bubble_sort();
-
-	void selection_sort_operation();
-	void selection_sort();
-		
+	bubblesort *bubble_sort;
+	selectionsort* selection_sort;
+	insertionsort* insertion_sort;
 	
-	void insertion__sort_operation();
-	void insertion_sort();
+
 
 	void merge_sort();
 	void set_merge_order(stack<int> *merge_order,int left,int right);

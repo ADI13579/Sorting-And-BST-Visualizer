@@ -1,10 +1,10 @@
 #include"ofApp.h"
 
-void ofApp::bubble_sort_operation()
+void bubblesort::bubble_sort_operation()
 {
 	setColor[0] = j;
 	setColor[1] = -1;
-	this_thread::sleep_for(chrono::milliseconds((int)(500-5*factor)));//y=mx+c where m=-5,c=500
+	this_thread::sleep_for(chrono::milliseconds((int)(500-5*(*factor))));//y=mx+c where m=-5,c=500
 	if (array[j].dat > array[j + 1].dat)
 	{
 		setColor[1] = j + 1;
@@ -17,7 +17,7 @@ void ofApp::bubble_sort_operation()
 	}
 }
 
-void ofApp::bubble_sort()
+bool bubblesort::bubble_sort()
 {
 	if (event)
 	{
@@ -38,8 +38,10 @@ void ofApp::bubble_sort()
 			j = 0;
 			button = 0;
 			setColor[0] = setColor[1] = -1;
+			return 0;
 		}
 
 		bubble_sort_operation();
 	}
+	return 1;
 }

@@ -7,15 +7,15 @@ void ofApp::update() {
 	{
 		if (bool_bubble_sort)
 		{
-			bubble_sort();
+			bool_bubble_sort=bubble_sort->bubble_sort();
 		}
 		if (bool_selection_sort)
 		{
-			selection_sort();
+			bool_selection_sort=selection_sort->selection_sort();
 		}
 		if (bool_insertion_sort)
 		{
-			insertion_sort();
+			bool_insertion_sort=insertion_sort->insertion_sort();
 		}
 		if (bool_merge_sort)
 		{
@@ -80,17 +80,20 @@ void ofApp::keyPressed(int key)
 	if (key == '1' && menu)
 	{
 		menu = 0;
+		bubble_sort = new bubblesort(&array[0], number,animate,&setColor[0],&button,&factor);
 		bool_bubble_sort = 1;
 	}
 	if (key == '2' && menu)
 	{
 		menu = 0;
 		bool_selection_sort = 1;
+		selection_sort = new selectionsort(&array[0], number, animate, &setColor[0], &button, &factor);
 	}
 	if (key == '3' && menu)
 	{
 		menu = 0;
 		bool_insertion_sort = 1;
+		insertion_sort= new insertionsort(&array[0], number, animate, &setColor[0], &button, &factor);
 	}
 	if (key == '4' && menu)
 	{
