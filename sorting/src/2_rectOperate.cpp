@@ -34,7 +34,6 @@ bool rectOperate::rectOperationShift(dat* array1, dat* array2)
 	{
 		a = moveUp(array1);
 		b = !a;
-		return 1;
 	}
 	else if (b)
 	{
@@ -45,7 +44,7 @@ bool rectOperate::rectOperationShift(dat* array1, dat* array2)
 			return 0;
 		}
 	}
-
+	return 1;
 }
 
 bool rectOperate::rectSwap(dat* array1, dat* array2)

@@ -86,25 +86,29 @@ void ofApp::keyPressed(int key)
 {
 	if (key == '1' && menu)
 	{
-		menu = 0;
+		shuffle();
+		button=menu = 0;
 		bubble_sort = new bubblesort(&array[0], number,animate,&setColor[0],&button,&factor);
 		bool_bubble_sort =prev_bool_bubble_sort= 1;
 	}
 	else if (key == '2' && menu)
 	{
-		menu = 0;
+		shuffle();
+		button=menu = 0;
 		bool_selection_sort =prev_bool_selection_sort= 1;
 		selection_sort = new selectionsort(&array[0], number, animate, &setColor[0], &button, &factor);
 	}
 	else if (key == '3' && menu)
 	{
-		menu = 0;
+		shuffle();
+		button=menu = 0;
 		bool_insertion_sort = prev_bool_insertion_sort=1;
 		insertion_sort= new insertionsort(&array[0], number, animate, &setColor[0], &button, &factor);
 	}
 	else if (key == '4' && menu)
 	{
-		menu = 0;
+		shuffle();
+		button=menu = 0;
 		merge_sort = new mergesort(&array[0], number, animate, &button, &factor);
 		bool_merge_sort =prev_bool_merge_sort=1;
 	}
@@ -138,8 +142,17 @@ void ofApp::keyPressed(int key)
 	}
 	else if (key == 'm')
 	{
-		bool_selection_sort = bool_bubble_sort = bool_insertion_sort = 0;
-		prev_bool_selection_sort =prev_bool_bubble_sort =prev_bool_insertion_sort = 0;
+		if (prev_bool_bubble_sort)
+			free(bubble_sort);
+		else if (prev_bool_insertion_sort)
+			free(insertion_sort);
+		else if (prev_bool_selection_sort)
+			free(selection_sort);
+		//this gives error buyt dont know why
+		/*else if (prev_bool_merge_sort)
+			free(merge_sort);*/
+		bool_selection_sort = bool_bubble_sort = bool_insertion_sort=bool_merge_sort = 0;
+		prev_bool_selection_sort =prev_bool_bubble_sort =prev_bool_insertion_sort=prev_bool_merge_sort = 0;
 		menu = 1;
 	}
 }
