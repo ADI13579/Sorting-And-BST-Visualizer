@@ -30,7 +30,7 @@ void ofApp::update() {
 	{
 		number = intField;
 		free(array);
-		free(animate);
+		free(animate);//scale depends on the greatest data so animate is again created
 		insertData();
 	}
 }

@@ -14,7 +14,7 @@ class ofApp : public ofBaseApp {
 		void draw();
 		void keyPressed(int key);
 		void insertData();
-		void shuffle();
+		void shuffle();//swaps datas with randomly
 
 
 		bubblesort *bubble_sort;
@@ -22,11 +22,11 @@ class ofApp : public ofBaseApp {
 		insertionsort* insertion_sort;
 		mergesort* merge_sort;
 
-		string st[7];
+		string st[7];//just stores some string displayed in menu and inside sorting
 
-	
-		bool menu,bool_bubble_sort,bool_selection_sort,bool_insertion_sort,bool_merge_sort;
-		bool prev_bool_bubble_sort,prev_bool_selection_sort,prev_bool_insertion_sort,prev_bool_merge_sort;
+		bool menu;
+		bool bool_bubble_sort,bool_selection_sort,bool_insertion_sort,bool_merge_sort;//handles the event for sorting type
+		bool prev_bool_bubble_sort,prev_bool_selection_sort,prev_bool_insertion_sort,prev_bool_merge_sort;//stores the previous state of events of sorting
 
 		dat *array;
 		float span,width;
