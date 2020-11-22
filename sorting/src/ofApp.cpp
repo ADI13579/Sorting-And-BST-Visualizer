@@ -3,6 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::update() {
 	span = 5 * factor;
+	height = ofGetHeight();
 	if (button)
 	{
 		if (bool_bubble_sort)
@@ -30,7 +31,7 @@ void ofApp::update() {
 	{
 		number = intField;
 		free(array);
-		free(animate);//scale depends on the greatest data so animate is again created
+		free(animate);//scale depends on the greatest data so animate is again created when numbers are increased
 		insertData();
 	}
 }
