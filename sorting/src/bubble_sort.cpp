@@ -1,10 +1,10 @@
-#include"ofApp.h"
+#include"sort.h"
 
 void bubblesort::bubble_sort_operation()
 {
 	setColor[0] = j;
 	setColor[1] = -1;
-	this_thread::sleep_for(chrono::milliseconds((int)(500-5*(*factor))));//y=mx+c where m=-5,c=500
+	std::this_thread::sleep_for(chrono::milliseconds((int)(300-5*(*factor))));//y=mx+c where m=-5,c=500
 	if (array[j].dat > array[j + 1].dat)
 	{
 		setColor[1] = j + 1;

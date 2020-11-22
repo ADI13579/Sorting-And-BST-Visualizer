@@ -82,10 +82,10 @@ bool rectOperate::rectSwap(dat* array1, dat* array2)
 
 bool rectOperate::moveUp(dat* array1, dat* array2)
 {
-	if ((array1->pos.y) < move.y - array1->size.y)
+	if ((array1->pos.y) < ofGetHeight() / 2 - array1->size.y)
 	{
-		array1->pos.y = move.y - array1->size.y;
-		array2->pos.y = move.y - array2->size.y;
+		array1->pos.y = ofGetHeight() / 2 - array1->size.y;
+		array2->pos.y = ofGetHeight() / 2 - array2->size.y;
 		return 0;
 	}
 	array1->pos.y -= *span;

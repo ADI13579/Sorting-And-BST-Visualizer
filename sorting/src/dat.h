@@ -1,5 +1,5 @@
 #pragma once
-
+#include"ofVec2f.h"
 class dat
 {
 public:

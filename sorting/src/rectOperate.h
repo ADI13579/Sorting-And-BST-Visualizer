@@ -1,21 +1,19 @@
 #pragma once
-#include"ofMain.h"
 #include"dat.h"
+
 class rectOperate
 {
 private:
 	bool a, b, c;
-	float *span;
-	ofVec2f move;
-	ofVec2f scale;
+	float *span,width,height;
 public:
-	rectOperate(float* _span, ofVec2f screen_size_half,ofVec2f scale_of_bars)
+	rectOperate(float* _span,float _width,float _height)
 	{
+		width = _width;
 		a = 1;
 		b = c=0;
 		span = _span;
-		move = screen_size_half;
-		scale = scale_of_bars;
+		height = _height;
 	};
 	//These are in 1_rectOperate.cpp
 	//==================================
@@ -35,6 +33,8 @@ public:
 		bool moveDown(dat* array1, dat* array2);
 		bool rectSwap(dat* array1, dat* array2);
 	//=====================================================
-
-		
+		float ofGetHeight()
+		{
+			return height;
+		}
 };

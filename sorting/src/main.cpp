@@ -9,5 +9,4 @@ int main( ){
 	ofSetupOpenGL(screen_height,screen_width,OF_WINDOW);		// <-------- setup the GL context
 	
 	ofRunApp(new ofApp());
-
 }
