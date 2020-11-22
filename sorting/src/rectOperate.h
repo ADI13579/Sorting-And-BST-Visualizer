@@ -5,9 +5,9 @@ class rectOperate
 {
 private:
 	bool a, b, c;
-	float *span,width,height;
+	float *span,width,*height;
 public:
-	rectOperate(float* _span,float _width,float _height)
+	rectOperate(float* _span,float _width,float *_height)
 	{
 		width = _width;
 		a = 1;
@@ -35,6 +35,6 @@ public:
 	//=====================================================
 		float ofGetHeight()
 		{
-			return height;
+			return *height;
 		}
 };

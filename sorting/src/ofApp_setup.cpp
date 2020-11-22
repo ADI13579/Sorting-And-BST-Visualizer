@@ -38,7 +38,7 @@ void ofApp::insertData()
 	height = ofGetHeight();
 	scale = { (float)ofGetWidth() / (number + 1) ,(float)ofGetHeight() / (2 * (number + 1)) };
 	width = scale.x * 70 / 100; //70% is the width of bar
-	animate = new rectOperate(&span, scale.x,height);
+	animate = new rectOperate(&span, scale.x,&height);
 	array = new dat[number];
 	for (int i = 0; i < number; i++)
 		array[i].dat = i + 1;
