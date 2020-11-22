@@ -1,0 +1,139 @@
+﻿  of3dPrimitives.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\3d\ofMesh.h(6,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  of3dUtils.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\3d\of3dUtils.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofCamera.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\3d\ofNode.h(4,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofEasyCam.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\3d\ofNode.h(4,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofNode.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\3d\ofNode.h(4,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofAppGLFWWindow.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\app\ofAppGLFWWindow.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofAppNoWindow.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\app\ofAppNoWindow.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofAppRunner.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\app\ofAppRunner.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofBaseApp.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\app\ofBaseApp.h(3,10): fatal error C1083: Cannot open include file: 'ofSoundBaseTypes.h': No such file or directory
+  ofMainLoop.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\app\ofMainLoop.cpp(8,10): fatal error C1083: Cannot open include file: 'ofMainLoop.h': No such file or directory
+  ofEvents.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\events\ofEvents.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofBufferObject.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\gl\ofBufferObject.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofFbo.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\gl\ofFbo.cpp(1,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofGLRenderer.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\gl\ofGLRenderer.h(2,10): fatal error C1083: Cannot open include file: 'ofGraphicsBaseTypes.h': No such file or directory
+  ofGLUtils.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\gl\ofGLUtils.h(10,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofLight.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\gl\ofLight.h(15,10): fatal error C1083: Cannot open include file: 'ofNode.h': No such file or directory
+  ofMaterial.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\gl\ofMaterial.h(2,10): fatal error C1083: Cannot open include file: 'ofColor.h': No such file or directory
+  ofGLProgrammableRenderer.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\gl\ofGLBaseTypes.h(5,10): fatal error C1083: Cannot open include file: 'ofGraphicsBaseTypes.h': No such file or directory
+  ofShader.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\gl\ofShader.h(10,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofTexture.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\gl\ofTexture.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  Generating Code...
+  Compiling...
+  ofVbo.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\gl\ofVbo.cpp(8,10): fatal error C1083: Cannot open include file: 'ofUtils.h': No such file or directory
+  ofVboMesh.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\gl\ofVboMesh.h(3,10): fatal error C1083: Cannot open include file: 'ofMesh.h': No such file or directory
+  of3dGraphics.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\of3dGraphics.h(12,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofBitmapFont.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofBitmapFont.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofCairoRenderer.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofCairoRenderer.h(4,10): fatal error C1083: Cannot open include file: 'cairo.h': No such file or directory
+  ofGraphics.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofGraphics.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofGraphicsBaseTypes.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofGraphicsBaseTypes.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofImage.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofImage.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofPath.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofPath.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofPixels.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofPixels.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofRendererCollection.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofGraphicsBaseTypes.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofTessellator.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofTessellator.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofTrueTypeFont.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\graphics\ofTrueTypeFont.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofMath.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\math\ofMath.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofMatrix3x3.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\math\ofMatrix3x3.h(8,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofMatrix4x4.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\math\ofMatrix4x4.h(13,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofQuaternion.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\math\ofQuaternion.h(12,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofVec2f.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\math\ofVec2f.h(6,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofVec4f.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\math\ofVec2f.h(6,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofFmodSoundPlayer.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\sound\ofFmodSoundPlayer.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  Generating Code...
+  Compiling...
+  ofRtAudioSoundStream.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\sound\ofRtAudioSoundStream.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofSoundBaseTypes.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\sound\ofSoundBaseTypes.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofSoundBuffer.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\sound\ofSoundBuffer.h(11,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofSoundPlayer.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\sound\ofSoundPlayer.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofSoundStream.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\sound\ofSoundStream.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofBaseTypes.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\types\ofBaseTypes.cpp(1,10): fatal error C1083: Cannot open include file: 'ofUtils.h': No such file or directory
+  ofColor.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\types\ofColor.h(4,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofParameter.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\types\ofParameter.h(3,10): fatal error C1083: Cannot open include file: 'ofEvents.h': No such file or directory
+  ofParameterGroup.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\types\ofParameterGroup.cpp(1,10): fatal error C1083: Cannot open include file: 'ofUtils.h': No such file or directory
+  ofRectangle.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\types\ofRectangle.h(4,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofFileUtils.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofConstants.h(129,11): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  ofFpsCounter.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofConstants.h(129,11): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  ofLog.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofConstants.h(129,11): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  ofMatrixStack.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofConstants.h(129,11): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  ofSystemUtils.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofConstants.h(129,11): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  ofThread.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofConstants.h(129,11): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  ofTimer.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofConstants.h(129,11): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  ofURLFileLoader.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofConstants.h(129,11): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  ofUtils.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofConstants.h(129,11): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  ofXml.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\utils\ofConstants.h(129,11): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  Generating Code...
+  Compiling...
+  ofDirectShowGrabber.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\video\ofDirectShowGrabber.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofDirectShowPlayer.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\video\ofDirectShowPlayer.h(6,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofVideoGrabber.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\video\ofVideoGrabber.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofVideoPlayer.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\video\ofVideoPlayer.h(3,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofArduino.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\communication\ofArduino.h(29,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  ofSerial.cpp
+D:\sorting\of_v0.11.0_vs2017_release\libs\openFrameworks\communication\ofSerial.h(4,10): fatal error C1083: Cannot open include file: 'ofConstants.h': No such file or directory
+  Generating Code...

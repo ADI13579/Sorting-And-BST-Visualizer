@@ -26,7 +26,7 @@ void ofApp::update() {
 			bool_merge_sort=merge_sort->merge_sort();
 		}
 	}
-	if (intField > number)
+	if (intField > 10  && intField!=number)
 	{
 		number = intField;
 		free(array);
@@ -86,29 +86,25 @@ void ofApp::keyPressed(int key)
 {
 	if (key == '1' && menu)
 	{
-		shuffle();
-		button=menu = 0;
+		menu = 0;
 		bubble_sort = new bubblesort(&array[0], number,animate,&setColor[0],&button,&factor);
 		bool_bubble_sort =prev_bool_bubble_sort= 1;
 	}
 	else if (key == '2' && menu)
 	{
-		shuffle();
-		button=menu = 0;
+		menu = 0;
 		bool_selection_sort =prev_bool_selection_sort= 1;
 		selection_sort = new selectionsort(&array[0], number, animate, &setColor[0], &button, &factor);
 	}
 	else if (key == '3' && menu)
 	{
-		shuffle();
-		button=menu = 0;
+		menu = 0;
 		bool_insertion_sort = prev_bool_insertion_sort=1;
 		insertion_sort= new insertionsort(&array[0], number, animate, &setColor[0], &button, &factor);
 	}
 	else if (key == '4' && menu)
 	{
-		shuffle();
-		button=menu = 0;
+		menu = 0;
 		merge_sort = new mergesort(&array[0], number, animate, &button, &factor);
 		bool_merge_sort =prev_bool_merge_sort=1;
 	}
@@ -142,6 +138,7 @@ void ofApp::keyPressed(int key)
 	}
 	else if (key == 'm')
 	{
+		shuffle();
 		if (prev_bool_bubble_sort)
 			free(bubble_sort);
 		else if (prev_bool_insertion_sort)

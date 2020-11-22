@@ -1,4 +1,4 @@
-#include"ofApp.h"
+#include"sort.h"
 
 bool mergesort::merge_sort()
 {

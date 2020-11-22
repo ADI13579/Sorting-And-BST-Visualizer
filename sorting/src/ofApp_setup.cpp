@@ -3,14 +3,12 @@
 void ofApp::setup() 
 {
 	setColor[0] = setColor[1] = -1;
-
 	number = 10;
 	intField = number;
-	
+
 	menu = 1;
 	bool_bubble_sort = bool_selection_sort = bool_insertion_sort = bool_merge_sort = 0;
 	prev_bool_bubble_sort = prev_bool_selection_sort = prev_bool_insertion_sort = prev_bool_merge_sort = 0;
-
 
 	filesystem::path p = "../font.ttf";
 	gui.setDefaultHeight(38);
@@ -21,7 +19,7 @@ void ofApp::setup()
 	gui.add(intField.setup("Add Number of Data", intField));
 	gui2.setup();
 	gui2.add(button.setup("Press to start/pause", 0, 400, 40));;
-	gui2.add(factor.setup("Slide right to increase speed",1,1,100,400,40)); 
+	gui2.add(factor.setup("Slide right to increase speed",1,1,60,400,40));
 	gui2.setPosition(ofGetWidth() / 2 - gui.getWidth() / 2, 0);
 
 	font.load(p,32);
@@ -37,10 +35,10 @@ void ofApp::setup()
 }
 void ofApp::insertData()
 {
+	height = ofGetHeight();
 	scale = { (float)ofGetWidth() / (number + 1) ,(float)ofGetHeight() / (2 * (number + 1)) };
 	width = scale.x * 70 / 100; //70% is the width of bar
-	move = { (float)ofGetWidth() / 2,(float)ofGetHeight() / 2 };
-	animate = new rectOperate(&span, move, scale);
+	animate = new rectOperate(&span, scale.x,height);
 	array = new dat[number];
 	for (int i = 0; i < number; i++)
 		array[i].dat = i + 1;

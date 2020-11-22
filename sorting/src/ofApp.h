@@ -29,8 +29,8 @@ class ofApp : public ofBaseApp {
 		bool prev_bool_bubble_sort,prev_bool_selection_sort,prev_bool_insertion_sort,prev_bool_merge_sort;//stores the previous state of events of sorting
 
 		dat *array;
-		float span,width;
-		ofVec2f move;
+		float span,width,height;
+
 		int number, setColor[3];
 		ofVec2f scale;
 		rectOperate* animate;
