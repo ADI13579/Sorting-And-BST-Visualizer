@@ -93,3 +93,43 @@ void mergesort::stack_rev(stack<int> *order)
 	}
 	*order = temp1;
 }
+/*
+the function set_merge_order does only the recursion part to store the order how the dividing occurs and stores it in a stack and again reverses it in the same stack
+
+
+event1=1 moves every rectangle to the bottom && assigns the value to merge_begin and merge_end and copies the elements of
+temp array back to original array;
+
+event2=1 starts the merge and assigns event1=1 after completion;
+
+void mergesort(int *array,int left,int right)
+{
+	int mid=(left+right)/2;
+		int j=left,k=mid+1;
+	if(left<mid)
+	{
+		mergesort(&array[0],left,mid);
+		mergesort(&array[0],mid+1,right);
+	}
+
+	int *temp_array=new int[right-left+1];
+	for(int i=left-left;i<=right-left;i++)
+	{
+		if((j<mid+1 && array[j]<=array[k])||k==right+1)
+		{
+			temp_array[i]=array[j];
+			j++;
+		}
+		else if((k<right+1 && array[k]<=array[j])||j==mid+1)
+		{
+			temp_array[i]=array[k];
+			k++;
+		}
+	}
+
+	for(int i=left;i<=right;i++)
+	{
+		array[i]=temp_array[i-left];
+	}
+}
+*/

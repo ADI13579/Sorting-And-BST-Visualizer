@@ -12,7 +12,7 @@ private:
 	bool event;
 	int* setColor;
 	dat* array;
-	int j, count, pos, number;
+	int j, i, pos, number;
 	rectOperate* animate;
 	ofxIntSlider* factor;
 	void bubble_sort_operation();
@@ -22,7 +22,7 @@ public:
 	{
 		number = _number;
 		pos = number - 1;
-		count = 0;
+		i = 0;
 		j = -1;
 		array = _array;
 		event = 0;
@@ -42,7 +42,7 @@ private:
 	bool event;
 	int* setColor;
 	dat* array;
-	int j, count, pos, number;
+	int j, i, pos, number;
 	rectOperate* animate;
 	ofxIntSlider* factor;
 	void selection_sort_operation();
@@ -52,7 +52,7 @@ public:
 	{
 		number = _number;
 		pos = 0;
-		count = 0;
+		i = 0;
 		j = -1;
 		array = _array;
 		event = 0;

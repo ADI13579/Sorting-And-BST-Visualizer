@@ -29,11 +29,11 @@ bool bubblesort::bubble_sort()
 		{
 			j = 0;
 			pos--;
-			count++;
+			i++;
 		}
 		else
 			j++;
-		if (count == number - 1)
+		if (i == number - 1)
 		{
 			j = 0;
 			button = 0;
@@ -45,3 +45,24 @@ bool bubblesort::bubble_sort()
 	}
 	return 1;
 }
+
+/*working
+event controls the animation of the rectangle to swap and gets updated itself when completes
+event=1 begins the rectangle swap operation and data is swapped in rectSwap which is a part of rectOperationSwap
+
+void bubblesort(int *array,int length)
+{
+	for(int i=0;i<length;i++)
+	{
+		for(int j=1;j<length-i;j++)
+		{
+			if(array[j-1]>array[j])
+			{
+				int temp=array[j-1];
+				array[j-1]=array[j];
+				array[j]=temp;;
+			}
+		}
+	}
+}
+*/
