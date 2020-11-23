@@ -3,11 +3,6 @@
 
 void insertionsort::insertion__sort_operation()
 {
-	if (array[pos].dat >= array[pos - 1].dat || pos == 0)
-	{
-		event3 = 1;
-	}
-
 	if (array[pos].dat < array[pos-1].dat && pos!=0)
 	{
 		if (array[pos].pos.y < ofGetHeight() / 2)
@@ -19,6 +14,10 @@ void insertionsort::insertion__sort_operation()
 		{
 			event1 = 1;
 		}
+	}
+	else if(array[pos].dat >= array[pos - 1].dat || pos == 0)
+	{
+		event3 = 1;
 	}
 	this_thread::sleep_for(chrono::milliseconds((int)(300 - 3 * (*factor))));//y=mx+c where m=-3,c=300
 }
@@ -61,7 +60,7 @@ bool insertionsort::insertion_sort()
 	else
 	{
 		setColor[0] = pos;
-		if (count == number)
+		if (count > number-1)
 		{
 			button = 0;
 			return 0;

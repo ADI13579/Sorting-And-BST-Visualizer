@@ -3,7 +3,7 @@
 
 void selectionsort::selection_sort_operation()
 {
-	setColor[0] = count;
+	setColor[0] = i;
 	setColor[1] = pos;
 	setColor[2] = j;
 
@@ -11,7 +11,7 @@ void selectionsort::selection_sort_operation()
 	{
 		pos = j;
 	}
-	if (j == number - 1 && count!=pos)
+	if (j == number - 1 && i!=pos)
 	{
 		event = 1;
 	}
@@ -22,19 +22,19 @@ bool selectionsort::selection_sort()
 	if (event)
 	{
 		setColor[2] = -1;
-		event = animate->rectOperationSwap(&array[count], &array[pos]);
+		event = animate->rectOperationSwap(&array[i], &array[pos]);
 	}
 	else
 	{
 		if (j == number - 1)
 		{
-			count++;
-			j = count;
+			i++;
+			j = i;
 			pos = j;
 		}
 		else
 			j++;
-		if (count == number - 1)
+		if (i == number - 1)
 		{
 			button = 0;
 			setColor[0] = setColor[1] = -1;
