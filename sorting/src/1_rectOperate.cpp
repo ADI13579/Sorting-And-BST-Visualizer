@@ -1,6 +1,5 @@
 #include"rectOperate.h"
 
-
 bool rectOperate::moveRight(dat* array, float point_x)
 {
 	if (array->pos.x >= point_x)
@@ -52,30 +51,15 @@ bool rectOperate::moveTo(dat* array, int index, dat* temp_merge_array)
 {
 	bool  b = 0;
 	float x = (index + 1) *width;
-	if (array->xpos > x)
-	{
-		*span = *span/10;
-		b = moveLeft(array, x);
-	}
-	else if (array->xpos < x)
-	{
-		*span =*span/10;
-		b = moveRight(array, x);
-	}
 
-	if (b)
+	b = moveUp(array);
+	if (array->xpos != x)
 	{
 		float m = (ofGetHeight() / 2 - array->size.y - (ofGetHeight() / 2 * 2 - array->size.y)) / (x - array->xpos);
 		float c = (ofGetHeight() / 2 - array->size.y) - m * x;
-		array->pos.y = m * array->pos.x + c;
+		array->pos.x = (array->pos.y - c) / m;
 	}
 
-	if (array->xpos == x)
-	{
-		*span = *span / 2;
-		b = moveUp(array);
-	}
-	
 	if(!b)
 	{
 		array->pos.y = ofGetHeight() / 2 - array->size.y;
@@ -83,6 +67,6 @@ bool rectOperate::moveTo(dat* array, int index, dat* temp_merge_array)
 		temp_merge_array[index] = *array;
 		temp_merge_array[index].pos.y = ofGetHeight() - array->size.y;
 	}
-
+	
 	return  b;
 }
