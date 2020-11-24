@@ -27,9 +27,12 @@ void ofApp::update() {
 			bool_merge_sort=merge_sort->merge_sort();
 		}
 	}
-	if (intField > 10  && intField!=number)
+	if (intField!=number)
 	{
-		number = intField;
+		if (intField > 10)
+			number = intField;
+		else
+			intField = number = 10;
 		free(array);
 		free(animate);//scale depends on the greatest data so animate is again created when numbers are increased
 		insertData();
@@ -146,7 +149,7 @@ void ofApp::keyPressed(int key)
 			free(insertion_sort);
 		else if (prev_bool_selection_sort)
 			free(selection_sort);
-		//this gives error buyt dont know why
+		//this gives error but dont know why
 		/*else if (prev_bool_merge_sort)
 			free(merge_sort);*/
 		bool_selection_sort = bool_bubble_sort = bool_insertion_sort=bool_merge_sort = 0;
