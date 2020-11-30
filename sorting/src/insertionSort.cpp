@@ -19,7 +19,7 @@ void insertionsort::insertion__sort_operation()
 	{
 		event3 = 1;
 	}
-	this_thread::sleep_for(chrono::milliseconds((int)(300 - 3 * (*factor))));//y=mx+c where m=-3,c=300
+	//this_thread::sleep_for(chrono::milliseconds((int)(300 - 3 * (*factor))));//y=mx+c where m=-3,c=300
 }
 bool insertionsort::insertion_sort()
 {
