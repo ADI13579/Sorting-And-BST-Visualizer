@@ -103,8 +103,7 @@ private:
 	bool event1, event2;
 	dat* array, * temp_merge_array;
 
-	stack<int> merge_order;
-
+	
 	int number, left, right;
 	rectOperate* animate;
 	ofxIntSlider* factor;
@@ -112,9 +111,12 @@ private:
 	void stack_rev(stack<int>* order);
 
 public:
+	stack<int> merge_order;
+	int* setColor;
 	int merge_begin, merge_end, index, merge_mid;
 	mergesort(dat* _array, int _number, rectOperate* _animate, ofxToggle* _button, ofxIntSlider* _factor)
 	{
+
 		index = right = left = 0;
 		merge_begin = merge_end = merge_mid = -1;
 		number = _number;
@@ -128,8 +130,13 @@ public:
 		temp_merge_array = new dat[number];
 		set_merge_order(&merge_order, 0, number - 1);
 		stack_rev(&merge_order);
+
+		setColor = new int[number];
 		for (int i = 0; i < number; i++)
+		{
 			temp_merge_array[i] = array[i];
+			setColor[i] = i % 3;
+		}
 	}
 	bool merge_sort();
 };

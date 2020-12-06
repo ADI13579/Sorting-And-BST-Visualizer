@@ -1,7 +1,6 @@
 #include "ofMain.h"
 #include "ofApp.h"
 
-//========================================================================
 int main( ){
 	ofGLWindowSettings settings;
 	
@@ -9,7 +8,7 @@ int main( ){
 	int screen_width= GetSystemMetrics(SM_CXSCREEN);
 	settings.setSize(screen_width, screen_height);
 	settings.title = "Sorting";
-	settings.windowMode = OF_GAME_MODE;
+	settings.windowMode = OF_WINDOW;
 	settings.setPosition(ofVec2f(0, 40));
 	
 	ofCreateWindow(settings);
