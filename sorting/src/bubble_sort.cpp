@@ -40,7 +40,6 @@ bool bubblesort::bubble_sort()
 			setColor[0] = setColor[1] = -1;
 			return 0;
 		}
-
 		bubble_sort_operation();
 	}
 	return 1;
