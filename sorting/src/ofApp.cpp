@@ -69,15 +69,14 @@ void ofApp::draw()
 				}
 				else
 				{
-					int merge_begin = merge_sort->merge_begin;
-					int merge_mid = merge_sort->merge_mid;
-					int merge_end = merge_sort->merge_end;
-
-					if (i > merge_mid&& i <= merge_end)
+					if (merge_sort->setColor[i] == 0)
+					{
 						ofSetColor(229, 234, 75);
-					else if (i >= merge_begin && i <= merge_mid)
+						cout << "condition met";
+					}
+					else if (merge_sort->setColor[i]==1)
 						ofSetColor(237, 124, 99);
-					else
+					else if(merge_sort->setColor[i]==2)
 						ofSetColor(145,224,215);
 				}
 				ofDrawRectangle(array[i].pos, array[i].size.x, array[i].size.y);

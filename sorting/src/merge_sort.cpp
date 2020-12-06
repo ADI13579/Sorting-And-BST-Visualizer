@@ -15,9 +15,19 @@ bool mergesort::merge_sort()
 			}
 			if (!event1)
 			{
+				if (merge_begin == 0 && setColor[merge_begin] == setColor[merge_end + 1])
+					setColor[merge_begin] = setColor[merge_begin] + 1;
+				else if (merge_end == number - 1)
+					setColor[merge_begin] = setColor[merge_begin - 1] + 1;
+				else
+					setColor[merge_begin] = setColor[merge_begin - 1] + setColor[merge_end + 1] + 1;
+				
+				if (setColor[merge_begin] != 2)
+					setColor[merge_begin] %= 2;
 				for (int i = merge_begin; i <= merge_end; i++)
 				{
 					array[i] = temp_merge_array[i];
+					setColor[i] = setColor[merge_begin];
 				}
 				if (merge_order.empty())
 				{
