@@ -74,7 +74,7 @@ private:
 	bool event1, event2, event3;
 	int* setColor;
 	dat* array;
-	int count, pos, number;
+	int i, pos, number;
 	rectOperate* animate;
 	ofxIntSlider* factor;
 	void insertion__sort_operation();
@@ -84,7 +84,7 @@ public:
 	{
 		number = _number;
 		pos = 1;
-		count = 0;
+		i = 0;
 		array = _array;
 		event1 = event2 = event3 = 0;
 		animate = _animate;

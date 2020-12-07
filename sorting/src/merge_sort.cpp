@@ -18,7 +18,6 @@ bool mergesort::merge_sort()
 				if (merge_begin == 0 && merge_end!=number-1 && setColor[merge_begin] == setColor[merge_end + 1])
 					setColor[merge_begin] = setColor[merge_end + 1]+1;
 
-
 				
 				if (merge_begin != 0 && merge_end != number - 1)
 				{

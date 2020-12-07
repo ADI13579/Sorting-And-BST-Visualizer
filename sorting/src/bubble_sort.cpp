@@ -48,6 +48,7 @@ bool bubblesort::bubble_sort()
 /*working
 event controls the animation of the rectangle to swap and gets updated itself when completes
 event=1 begins the rectangle swap operation and data is swapped in rectSwap which is a part of rectOperationSwap
+pos is used to know to which point the swapping should continue
 
 void bubblesort(int *array,int length)
 {

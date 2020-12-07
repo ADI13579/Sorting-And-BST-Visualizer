@@ -19,8 +19,9 @@ void insertionsort::insertion__sort_operation()
 	{
 		event3 = 1;
 	}
-	//this_thread::sleep_for(chrono::milliseconds((int)(300 - 3 * (*factor))));//y=mx+c where m=-3,c=300
+	this_thread::sleep_for(chrono::milliseconds((int)(120 -  2* (*factor))));//y=mx+c where m=-2,c=120
 }
+
 bool insertionsort::insertion_sort()
 {
 	if (event1 || event2 || event3)
@@ -52,15 +53,15 @@ bool insertionsort::insertion_sort()
 			event3 = animate->moveDown(&array[pos]);
 			if (event3 == 0)
 			{
-				count++;
-				pos = count;
+				i++;
+				pos = i;
 			} 
 		}
 	}
 	else
 	{
 		setColor[0] = pos;
-		if (count > number-1)
+		if (i > number-1)
 		{
 			button = 0;
 			return 0;
