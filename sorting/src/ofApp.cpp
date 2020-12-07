@@ -72,7 +72,6 @@ void ofApp::draw()
 					if (merge_sort->setColor[i] == 0)
 					{
 						ofSetColor(229, 234, 75);
-						cout << "condition met";
 					}
 					else if (merge_sort->setColor[i]==1)
 						ofSetColor(237, 124, 99);
@@ -148,9 +147,7 @@ void ofApp::keyPressed(int key)
 			free(insertion_sort);
 		else if (prev_bool_selection_sort)
 			free(selection_sort);
-		//this gives error but dont know why
-		/*else if (prev_bool_merge_sort)
-			free(merge_sort);*/
+		
 		bool_selection_sort = bool_bubble_sort = bool_insertion_sort=bool_merge_sort = 0;
 		prev_bool_selection_sort =prev_bool_bubble_sort =prev_bool_insertion_sort=prev_bool_merge_sort = 0;
 		menu = 1;
