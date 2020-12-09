@@ -14,15 +14,15 @@ class ofApp : public ofBaseApp{
 		float array[1000];
 		float pos_array[256];
 		int index,nodes,max_index;
-		int a;
+		int a,search_pos,exists;
 
 		int get_max();
 		void display();
-		void insert(float *pos_array,int input,int index);
-		int search(int input, int pos,int *search_pos);
+		void insert(int input,int index);
+		void search(int input, int pos);
 		void remove(int input);
 	
 		ofxPanel panel;
-		ofxToggle insertButton,removeButton;
+		ofxToggle insertButton,removeButton,searchButton;
 		ofxIntField input;
 };

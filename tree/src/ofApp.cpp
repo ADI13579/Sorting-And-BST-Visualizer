@@ -26,7 +26,7 @@ int ofApp::get_max()
 	}
 	return temp;
 }
-void ofApp::insert(float *array,int input, int index)
+void ofApp::insert(int input, int index)
 {
 	if (index < 1000)
 	{
@@ -38,28 +38,30 @@ void ofApp::insert(float *array,int input, int index)
 			return;
 		}
 		else if (input > array[index])
-			insert(array,input, 2 * index + 1);
+			insert(input, 2 * index + 1);
 		else if (input < array[index])
-			insert(array,input, 2 * index);
+			insert(input, 2 * index);
 		else if (array[index] == input)
+		{
+			exists= index;
 			return;
+		}
 	}
 }
 
-int ofApp::search(int input, int pos,int *search_pos)
+void ofApp::search(int input, int pos)
 {
 	if (pos < 500)
 	{
 		if (input == -1)
-			return -1;
+			search_pos = -1;
 		else if (input > array[pos])
-			search(input, 2 * pos + 1,search_pos);
+			search(input, 2 * pos + 1);
 		else if (input < array[pos])
-			search(input, 2 * pos,search_pos);
+			search(input, 2 * pos);
 		else if (array[pos] == input)
-		{
-			*search_pos=pos;
-		}
+			search_pos=pos;
+		return;
 	}
 }
 
@@ -67,8 +69,8 @@ int ofApp::search(int input, int pos,int *search_pos)
 void ofApp::remove(int input)
 {
 	int search_pos=0,temp=0,insertedat=0;
-	search(input, 1,&search_pos);
-	if (search_pos!= -1 && search_pos!=0 && search_pos<500);
+	search(input, 1);
+	if (search_pos!= -1 && search_pos!=0 && search_pos<500)
 	{
 		nodes--;
 		if (array[2 * search_pos] == -1 && array[2 * search_pos + 1] == -1)
@@ -94,7 +96,7 @@ void ofApp::remove(int input)
 			{
 				if (array[i] != -1)
 				{
-					insert(&array[0],array[i], 1);
+					insert(array[i], 1);
 					array[i] = -1;
 				}
 			}
@@ -107,13 +109,14 @@ void ofApp::remove(int input)
 			{
 				if (array[i] != -1)
 				{
-					insert(&array[0],array[i], 1);
+					insert(array[i], 1);
 					array[i] = -1;
 				}
 			}
 		}
 		max_index = get_max();
 	}
+	search_pos = exists = -1;
 }
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -136,46 +139,55 @@ void ofApp::setup(){
 
 	panel.setup();
 	panel.add(input.setup("Enter Data", input));
+	panel.add(searchButton.setup("Press to search", searchButton));
 	panel.add(insertButton.setup("Press to insert", insertButton));
 	panel.add(removeButton.setup("Press to remove", removeButton));
-	insertButton = removeButton = 0;
+
+	searchButton=insertButton = removeButton = 0;
 
 
-	insert(&array[0], 47, 1);
-	insert(&array[0], 24, 1);
-	insert(&array[0], 21, 1);
-	insert(&array[0], 25, 1);
-	insert(&array[0], 48, 1);
-	insert(&array[0], 49, 1);
+	insert(47, 1);
+	insert(24, 1);
+	insert(21, 1);
+	insert(25, 1);
+	insert(48, 1);
+	insert(49, 1);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 	int insertedat;
 	index = 1;
-	if (insertButton && input!=-1)
+	if ((insertButton || searchButton || removeButton) && input == -1)
+		removeButton = insertButton = removeButton = 0;
+	else if (insertButton && input!=-1)
 	{
-		insert(&array[0],input,1);
-		insertButton = 0;
+		search_pos=exists = -1;
+		insert(input,1);
+		removeButton=searchButton=insertButton = 0;
 		input = -1;
-		
 	}
 	else if (removeButton && input!=-1)
 	{
+		search_pos =exists= -1;
 		remove(input);
-		removeButton = 0;
+		insertButton=searchButton=removeButton = 0;
 		input = -1;
+	}
+	else if(searchButton && input!=-1)
+	{
+		search_pos =exists= -1;
+		search(input, 1);
+		insertButton=searchButton=searchButton = 0;
 	}
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 	panel.draw();
-	int span = 100,j=1;
 	
 	int k = 1;
-	int add = 0;
-
+	
 	for (int i = 1; i <= max_index; i++)
 	{
 		if (array[2 * i] != -1)
@@ -189,9 +201,13 @@ void ofApp::draw(){
 		if (array[i] != -1)
 		{
 			ofSetColor(163, 119, 147);
+			if (search_pos == i)
+				ofSetColor(157,196,78);
+			if (exists == i)
+				ofSetColor(204,8,44);
 			ofDrawCircle(ofVec2f(pos_array[i], k * 100), 50);
 			ofSetColor(0, 0, 0);
-			ofDrawBitmapString(array[i], pos_array[i]-25, k * 100);
+			ofDrawBitmapString(array[i], pos_array[i]-12, k * 100);
 		}
 		if (i == pow(2, k) - 1)
 		{
