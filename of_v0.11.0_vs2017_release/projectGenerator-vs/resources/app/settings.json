@@ -1,0 +1,9 @@
+{
+	"advancedMode": true,
+	"defaultOfPath": "E:\\of_v0.11.0_vs2017_release",
+	"defaultPlatform": "vs",
+	"defaultRelativeProjectPath": "apps/myApps",
+	"showConsole": false,
+	"showDeveloperTools": false,
+	"useDictionaryNameGenerator": true
+}

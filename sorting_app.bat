@@ -1,2 +1,2 @@
 @ECHO OFF
-START sorting/bin/sorting.exe
+START sorting/bin/sorting_debug.exe
