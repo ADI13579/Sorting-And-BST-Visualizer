@@ -1,20 +1,5 @@
 #include "ofApp.h"
 
-void ofApp::display()
-{
-	int height = log2(max_index);
-	int p = 100, k = 1;
-	int add = 0;
-
-	for (int i = 1; i <= max_index; i++)
-	{
-		if (i == pow(2, k) - 1)
-		{
-			ofDrawCircle(ofVec2f(ofGetWidth() / (pow(2, k) * (k % i)), k * 100), 50);
-			k++;
-		}
-	}
-}
 int ofApp::get_max()
 {
 	int temp = pow(2, nodes);
@@ -49,19 +34,20 @@ void ofApp::insert(int input, int index)
 	}
 }
 
-void ofApp::search(int input, int pos)
+int ofApp::search(int input, int pos,int *search_pos)
 {
 	if (pos < 500)
 	{
 		if (input == -1)
-			search_pos = -1;
+			return -1;
 		else if (input > array[pos])
-			search(input, 2 * pos + 1);
+			search(input, 2 * pos + 1,search_pos);
 		else if (input < array[pos])
-			search(input, 2 * pos);
+			search(input, 2 * pos,search_pos);
 		else if (array[pos] == input)
-			search_pos=pos;
-		return;
+		{
+			*search_pos=pos;
+		}
 	}
 }
 
@@ -69,8 +55,8 @@ void ofApp::search(int input, int pos)
 void ofApp::remove(int input)
 {
 	int search_pos=0,temp=0,insertedat=0;
-	search(input, 1);
-	if (search_pos!= -1 && search_pos!=0 && search_pos<500)
+	search(input, 1,&search_pos);
+	if (search_pos!= -1 && search_pos!=0 && search_pos<500);
 	{
 		nodes--;
 		if (array[2 * search_pos] == -1 && array[2 * search_pos + 1] == -1)
@@ -143,7 +129,7 @@ void ofApp::setup(){
 	panel.add(insertButton.setup("Press to insert", insertButton));
 	panel.add(removeButton.setup("Press to remove", removeButton));
 
-	searchButton=insertButton = removeButton = 0;
+	insertButton = removeButton = 0;
 
 
 	insert(47, 1);
@@ -165,7 +151,8 @@ void ofApp::update(){
 		search_pos=exists = -1;
 		insert(input,1);
 		removeButton=searchButton=insertButton = 0;
-		input = -1;
+		if (exists == -1)
+			searchButton = 1;
 	}
 	else if (removeButton && input!=-1)
 	{
@@ -177,7 +164,7 @@ void ofApp::update(){
 	else if(searchButton && input!=-1)
 	{
 		search_pos =exists= -1;
-		search(input, 1);
+		search(input, 1, &search_pos);
 		insertButton=searchButton=searchButton = 0;
 	}
 }
@@ -200,11 +187,13 @@ void ofApp::draw(){
 		}
 		if (array[i] != -1)
 		{
-			ofSetColor(163, 119, 147);
 			if (search_pos == i)
-				ofSetColor(157,196,78);
-			if (exists == i)
-				ofSetColor(204,8,44);
+				ofSetColor(117, 216, 136);
+			else if (exists == i)
+				ofSetColor(209,56,89);
+			else
+				ofSetColor(163, 119, 147);
+
 			ofDrawCircle(ofVec2f(pos_array[i], k * 100), 50);
 			ofSetColor(0, 0, 0);
 			ofDrawBitmapString(array[i], pos_array[i]-12, k * 100);
