@@ -18,7 +18,7 @@ class ofApp : public ofBaseApp{
 
 		int get_max();
 		void display();
-		void insert(float *pos_array,int input,int index,int *insertedat);
+		void insert(float *pos_array,int input,int index);
 		int search(int input, int pos,int *search_pos);
 		void remove(int input);
 	

@@ -26,7 +26,7 @@ int ofApp::get_max()
 	}
 	return temp;
 }
-void ofApp::insert(float *array,int input, int index,int *insertedat)
+void ofApp::insert(float *array,int input, int index)
 {
 	if (index < 1000)
 	{
@@ -34,14 +34,13 @@ void ofApp::insert(float *array,int input, int index,int *insertedat)
 		{
 			nodes++;
 			array[index] = input;
-			*insertedat = index;
 			max_index = get_max();
 			return;
 		}
 		else if (input > array[index])
-			insert(array,input, 2 * index + 1,insertedat);
+			insert(array,input, 2 * index + 1);
 		else if (input < array[index])
-			insert(array,input, 2 * index,insertedat);
+			insert(array,input, 2 * index);
 		else if (array[index] == input)
 			return;
 	}
@@ -95,7 +94,7 @@ void ofApp::remove(int input)
 			{
 				if (array[i] != -1)
 				{
-					insert(&array[0],array[i], 1, &insertedat);
+					insert(&array[0],array[i], 1);
 					array[i] = -1;
 				}
 			}
@@ -108,7 +107,7 @@ void ofApp::remove(int input)
 			{
 				if (array[i] != -1)
 				{
-					insert(&array[0],array[i], 1, &insertedat);
+					insert(&array[0],array[i], 1);
 					array[i] = -1;
 				}
 			}
@@ -142,13 +141,12 @@ void ofApp::setup(){
 	insertButton = removeButton = 0;
 
 
-	//int lo;
-	//insert(&array[0], 47, 1, &lo);
-	//insert(&array[0], 24, 1, &lo);
-	//insert(&array[0], 21, 1, &lo);
-	//insert(&array[0], 25, 1, &lo);
-	//insert(&array[0], 48, 1, &lo);
-	//insert(&array[0], 49, 1, &lo);
+	insert(&array[0], 47, 1);
+	insert(&array[0], 24, 1);
+	insert(&array[0], 21, 1);
+	insert(&array[0], 25, 1);
+	insert(&array[0], 48, 1);
+	insert(&array[0], 49, 1);
 }
 
 //--------------------------------------------------------------
@@ -157,15 +155,16 @@ void ofApp::update(){
 	index = 1;
 	if (insertButton && input!=-1)
 	{
-		insert(&array[0],input,1,&insertedat);
+		insert(&array[0],input,1);
 		insertButton = 0;
-		
+		input = -1;
 		
 	}
-	if (removeButton && input!=-1)
+	else if (removeButton && input!=-1)
 	{
 		remove(input);
 		removeButton = 0;
+		input = -1;
 	}
 }
 
