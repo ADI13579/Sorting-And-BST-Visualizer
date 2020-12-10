@@ -1,0 +1,30 @@
+﻿  main.cpp
+  ofApp.cpp
+  ofxBaseGui.cpp
+  ofxButton.cpp
+E:\sorting-animation\tree\src\ofApp.cpp(149,6): warning C4101: 'insertedat': unreferenced local variable
+  ofxColorPicker.cpp
+  ofxGuiGroup.cpp
+E:\sorting-animation\tree\src\ofApp.cpp(30): warning C4715: 'ofApp::search': not all control paths return a value
+  ofxInputField.cpp
+  ofxLabel.cpp
+  ofxPanel.cpp
+E:\sorting-animation\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxInputField.cpp(276,23): warning C4018: '<': signed/unsigned mismatch
+E:\sorting-animation\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxInputField.cpp(265): message : while compiling class template member function 'void ofxInputField<float>::moveCursor(int)'
+E:\sorting-animation\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxInputField.cpp(368): message : see reference to function template instantiation 'void ofxInputField<float>::moveCursor(int)' being compiled
+E:\sorting-animation\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxInputField.cpp(805): message : see reference to class template instantiation 'ofxInputField<float>' being compiled
+  ofxSlider.cpp
+  ofxSliderGroup.cpp
+  ofxToggle.cpp
+     Creating library bin\tree_debug.lib and object bin\tree_debug.exp
+  tree.vcxproj -> E:\sorting-animation\tree\bin\tree_debug.exe
+  
+  	                   2	E:\sorting-animation\of_v0.11.0_vs2017_release\libs\fmodex\lib\vs\Win32\
+  	  *EXTRA File 		 6018560	E:\sorting-animation\tree\bin\FreeImage.dll
+  	    Newer     		 1266176	E:\sorting-animation\of_v0.11.0_vs2017_release\libs\fmodex\lib\vs\Win32\fmodex.dll
+  	    Newer     		 1312768	E:\sorting-animation\of_v0.11.0_vs2017_release\libs\fmodex\lib\vs\Win32\fmodexL.dll
+  
+  	                   1	E:\sorting-animation\of_v0.11.0_vs2017_release\libs\FreeImage\lib\vs\Win32\
+  	  *EXTRA File 		 1266176	E:\sorting-animation\tree\bin\fmodex.dll
+  	  *EXTRA File 		 1312768	E:\sorting-animation\tree\bin\fmodexL.dll
+  	    Newer     		 6018560	E:\sorting-animation\of_v0.11.0_vs2017_release\libs\FreeImage\lib\vs\Win32\FreeImage.dll
