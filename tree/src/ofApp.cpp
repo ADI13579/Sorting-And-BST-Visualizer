@@ -55,8 +55,10 @@ int ofApp::search(int input, int pos,int *search_pos)
 void ofApp::remove(int input)
 {
 	int search_pos=0,temp=0,insertedat=0;
+	
 	search(input, 1,&search_pos);
-	if (search_pos!= -1 && search_pos!=0 && search_pos<500);
+
+	if (search_pos>0 && search_pos<500)
 	{
 		nodes--;
 		if (array[2 * search_pos] == -1 && array[2 * search_pos + 1] == -1)
@@ -106,40 +108,39 @@ void ofApp::remove(int input)
 }
 //--------------------------------------------------------------
 void ofApp::setup(){
-	for (int i = 0; i < 1000; i++)
-		array[i] = -1;
 	
 	pos_array[0] = -1;
 
-	for (int i = 1; i < 8; i++)
+	filesystem::path p = "../font.ttf";
+	st[0] = "Press R to create Random Tree";
+	st[1] = "Press E to Clear";
+	font.load(p, 20);
+
+	for (int i = 1; i < 10; i++)
 	{
 		for (int j = pow(2, i - 1),k=1; j < pow(2, i); j++,k+=2)
 		{
 			pos_array[j]=k*ofGetWidth()/ (pow(2,i));
 		}
 	}
-
-
-	index = nodes=max_index=0;
-	input = -1;
-
 	panel.setup();
 	panel.add(input.setup("Enter Data", input));
 	panel.add(searchButton.setup("Press to search", searchButton));
 	panel.add(insertButton.setup("Press to insert", insertButton));
 	panel.add(removeButton.setup("Press to remove", removeButton));
-
-	insertButton = removeButton = 0;
-
-
-	insert(47, 1);
-	insert(24, 1);
-	insert(21, 1);
-	insert(25, 1);
-	insert(48, 1);
-	insert(49, 1);
+	reset();
 }
 
+void ofApp::reset()
+{
+	for (int i = 0; i < 1000; i++)
+		array[i] = -1;
+
+	index = nodes = max_index = 0;
+	input = -1;
+	insertButton = removeButton = 0;
+
+}
 //--------------------------------------------------------------
 void ofApp::update(){
 	int insertedat;
@@ -173,8 +174,17 @@ void ofApp::update(){
 void ofApp::draw(){
 	panel.draw();
 	
-	int k = 1;
+	int height = log2f(max_index);
+	int radius=45,k = 1;
+	if (height >= 6)
+		radius =20;
+
+
 	
+		
+	for (int i = 0; i < 2; i++)
+		font.drawString(st[i], (ofGetWidth()- font.stringWidth(st[i])-100), (4 + i) * 30);
+
 	for (int i = 1; i <= max_index; i++)
 	{
 		if (array[2 * i] != -1)
@@ -194,9 +204,9 @@ void ofApp::draw(){
 			else
 				ofSetColor(163, 119, 147);
 
-			ofDrawCircle(ofVec2f(pos_array[i], k * 100), 50);
+			ofDrawCircle(ofVec2f(pos_array[i], k * 100), radius);
 			ofSetColor(0, 0, 0);
-			ofDrawBitmapString(array[i], pos_array[i]-12, k * 100);
+			ofDrawBitmapString(array[i], pos_array[i]-radius/4, k * 100);
 		}
 		if (i == pow(2, k) - 1)
 		{
@@ -207,6 +217,29 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+	int a[100];
+	int k;
 	if (key == 'r')
+	{
 		setup();
+		key = 'f';
+	}
+	if (key == 'f')
+	{
+		k = ofRandom(5, 15);
+		for (int i = 0; i < k; i++)
+		{
+			if (max_index < 500)
+			{
+				a[i] = ofRandom(1, 100);
+				insert(a[i], 1);
+				if (exists = 1)
+					exists = -1;
+			}
+		}
+	}
+	else if(key='e')
+	{
+		reset();
+	}
 }
