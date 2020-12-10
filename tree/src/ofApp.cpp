@@ -188,6 +188,8 @@ void ofApp::draw(){
 
 	for (int i = 1; i <= max_index; i++)
 	{
+		if (k * 100 > ofGetHeight())
+			remove(array[i]);
 		if (array[2 * i] != -1)
 		{
 			ofDrawLine(ofVec2f(pos_array[i], k * 100), ofVec2f(pos_array[2 * i], (k + 1) * 100));
@@ -228,6 +230,7 @@ void ofApp::keyPressed(int key){
 	if (key == 'f')
 	{
 		k = ofRandom(4, 16);
+
 		for (int i = 0; i < k; i++)
 		{
 			if (max_index < 500)
