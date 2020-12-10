@@ -11,6 +11,24 @@ int ofApp::get_max()
 	}
 	return temp;
 }
+
+int ofApp::search(int input, int pos, int* search_pos)
+{
+	if (pos < 500)
+	{
+		if (input == -1)
+			return -1;
+		else if (input > array[pos])
+			search(input, 2 * pos + 1, search_pos);
+		else if (input < array[pos])
+			search(input, 2 * pos, search_pos);
+		else if (array[pos] == input)
+		{
+			*search_pos = pos;
+		}
+	}
+}
+
 void ofApp::insert(int input, int index)
 {
 	if (index < 1000)
@@ -30,23 +48,6 @@ void ofApp::insert(int input, int index)
 		{
 			exists= index;
 			return;
-		}
-	}
-}
-
-int ofApp::search(int input, int pos,int *search_pos)
-{
-	if (pos < 500)
-	{
-		if (input == -1)
-			return -1;
-		else if (input > array[pos])
-			search(input, 2 * pos + 1,search_pos);
-		else if (input < array[pos])
-			search(input, 2 * pos,search_pos);
-		else if (array[pos] == input)
-		{
-			*search_pos=pos;
 		}
 	}
 }
@@ -124,6 +125,8 @@ void ofApp::setup(){
 		}
 	}
 	panel.setup();
+	panel.setDefaultHeight(ofGetHeight()/20);
+	panel.setDefaultWidth(ofGetWidth()/4-50);
 	panel.add(input.setup("Enter Data", input));
 	panel.add(searchButton.setup("Press to search", searchButton));
 	panel.add(insertButton.setup("Press to insert", insertButton));
@@ -179,9 +182,7 @@ void ofApp::draw(){
 	if (height >= 6)
 		radius =20;
 
-
 	
-		
 	for (int i = 0; i < 2; i++)
 		font.drawString(st[i], (ofGetWidth()- font.stringWidth(st[i])-100), (4 + i) * 30);
 
@@ -226,7 +227,7 @@ void ofApp::keyPressed(int key){
 	}
 	if (key == 'f')
 	{
-		k = ofRandom(5, 15);
+		k = ofRandom(4, 16);
 		for (int i = 0; i < k; i++)
 		{
 			if (max_index < 500)
@@ -238,7 +239,7 @@ void ofApp::keyPressed(int key){
 			}
 		}
 	}
-	else if(key='e')
+	else if(key=='e')
 	{
 		reset();
 	}
