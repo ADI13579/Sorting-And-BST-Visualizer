@@ -27,6 +27,7 @@ int ofApp::search(int input, int pos, int* search_pos)
 			*search_pos = pos;
 		}
 	}
+	return 1;
 }
 
 void ofApp::insert(int input, int index)

@@ -1,0 +1,1 @@
+OF_ROOT = /home/adithya/Desktop/project/of_v20221204_linux64gcc6_release
