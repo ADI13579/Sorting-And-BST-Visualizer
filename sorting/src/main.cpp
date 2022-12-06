@@ -3,10 +3,7 @@
 
 int main( ){
 	ofGLWindowSettings settings;
-	
-	int screen_height=GetSystemMetrics(SM_CYSCREEN);
-	int screen_width= GetSystemMetrics(SM_CXSCREEN);
-	settings.setSize(screen_width, screen_height);
+	settings.setSize(1024, 768);
 	settings.title = "Sorting";
 	settings.windowMode = OF_WINDOW;
 	settings.setPosition(ofVec2f(0, 40));
